@@ -1,0 +1,22 @@
+:root{
+    --bluh: #187af1;
+    --blutxt: #015e9c;
+    --blubg: #caf0f8cd;
+}
+ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5{
+    font-family: "Bona Nova SC", serif;
+    color: var(--bluh);
+ }
+
+body{
+    font-family: "Lora", serif;
+    background-color: #caf0f8cd;
+    color: #015e9c;
+}
+
+.altezza{
+    height: 100000px;
+}
+.navCustom{
+    background-color: #16a2ff4f;
+}
