@@ -14,7 +14,7 @@
             <a class="nav-link active navColor" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active navColor" aria-current="page" href="#">Inserisci un annuncio</a>
+            <a class="nav-link active navColor" aria-current="page" href="{{route('travel.create')}}">Inserisci un annuncio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active navColor" aria-current="page" href="#">Lista annunci</a>
