@@ -1,5 +1,5 @@
 :root{
-    --bluh: #187af1;
+    --bluh: rgb(24, 122, 241);
     --blutxt: #015e9c;
     --blubg: #caf0f8cd;
 }
@@ -14,9 +14,17 @@ body{
     color: #015e9c;
 }
 
+
 .altezza{
     height: 100000px;
 }
 .navCustom{
     background-color: #16a2ff4f;
+    width: 100%;
+    
 }
+
+.navColor{
+    color: var(--bluh) !important;
+}
+
