@@ -14,10 +14,6 @@ body{
     color: #015e9c;
 }
 
-
-.altezza{
-    height: 100000px;
-}
 .navCustom{
     background-color: #16a2ff4f;
     width: 100%;
@@ -28,3 +24,79 @@ body{
     color: var(--bluh) !important;
 }
 
+.footerCustom{
+    background-color: #16a2ff4f;
+}
+
+.copyrightCustom{
+    background-color: var(--bluh);
+    color: var(--blubg);
+}
+
+
+
+.titolo{
+    color: var(--blutxt);
+}
+
+/* ----------------- inizio button 1--------------------- */
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: rgba(24, 180, 241, 0.398);
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Lora", serif;
+   
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--blutxt);
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--blutxt);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background:rgba(24, 180, 241, 0.398);
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+
+/* ----------------- fine button 1 --------------------- */
