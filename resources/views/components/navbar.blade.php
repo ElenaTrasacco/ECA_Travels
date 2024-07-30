@@ -21,6 +21,20 @@
                 <li class="nav-item">
                     <a class="nav-link active navColor" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
                 </li>
+
+                <li class="dropdown">
+                    <a class="nav-link dropodown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                        <li>
+                            <a class="dropdown-item" href="{{route('travel.category',['category'=>$category])}}">{{$category->name}}</a>
+                        </li>
+                        
+                          @endforeach
+
+                    </ul>
+                    </button>
+                </li>
             </ul>
         </div>
 

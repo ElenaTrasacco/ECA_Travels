@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Travel;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Routing\Controllers\Middleware;
@@ -72,5 +73,10 @@ class TravelController extends Controller implements HasMiddleware
     public function destroy(Travel $travel)
     {
         //
+    }
+
+    public function byCategory(Category $category)
+    {
+        return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
     }
 }

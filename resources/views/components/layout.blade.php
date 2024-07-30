@@ -13,6 +13,8 @@
         {{$slot}}
     </div>
     
+    <div class="mt-5">
+        <x-footer/>
+    </div>
 </body>
-<x-footer/>
 </html>

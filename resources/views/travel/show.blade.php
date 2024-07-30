@@ -19,6 +19,7 @@
                 <p>Titolo: {{$travel->title}}</p>
                 <p>Prezzo: {{$travel->price}}</p>
                 <p>Giorni consigliati: {{$travel->time}}</p>
+                <p>Category: {{$travel->category->name}}</p>
                 <p>descrizione: {{$travel->description}}</p>
             </div>
         </div>
