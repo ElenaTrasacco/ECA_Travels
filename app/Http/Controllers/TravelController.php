@@ -20,7 +20,10 @@ class TravelController extends Controller implements HasMiddleware
     
     public function index()
     {
-        //
+        // $travel = Travel::take(3)->orderBy('created_at','desc')->get();
+        // return view('travel.index',compact('travel'));
+        $travels = Travel::orderBy('created_at','desc')->paginate(4);
+        return view('travel.index',compact('travels'));
     }
 
     /**
@@ -45,7 +48,7 @@ class TravelController extends Controller implements HasMiddleware
      */
     public function show(Travel $travel)
     {
-        //
+        return view('travel.show',compact('travel'));
     }
 
     /**
