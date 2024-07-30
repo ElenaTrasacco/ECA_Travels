@@ -2,7 +2,17 @@
     <div class="container mt-5">
         <div class="row ">
             <div class="col-12 mt-5 d-flex justify-content-center">
-                <h1>titlo di effetto</h1>
+                <h1>titolo di effetto</h1>
+            </div>
+            <div class="col-12">
+                <div class="d-flex justify-content-end">
+                        <a class="btn cta" href="{{route('travel.create')}}"> Inserisci Annuncio
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                                </svg>
+                        </a>
+                    </div>
             </div>
         </div>
     </div>
