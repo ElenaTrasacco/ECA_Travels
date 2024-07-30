@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Travel;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class TravelController extends Controller
+class TravelController extends Controller implements HasMiddleware
 {
     /**
      * Display a listing of the resource.
      */
+
+    public static function middleware() : array {
+        return [new Middleware("auth" , only:["create"])];
+    }
+    
     public function index()
     {
         //
