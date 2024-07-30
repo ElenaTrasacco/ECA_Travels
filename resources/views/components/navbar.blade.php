@@ -25,10 +25,10 @@
         <div class="navbar-nav ">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
             <li class="nav-item">
-                <a class="nav-link active navColor" aria-current="page" href="#">Registrati</a>
+                <a class="nav-link active navColor" aria-current="page" href="{{route('register')}}">Registrati</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link active navColor" aria-current="page" href="#">Login</a>
+                <a class="nav-link active navColor" aria-current="page" href="{{route('login')}}">Login</a>
               </li>
               {{-- <li class="nav-item">
                 <a class="nav-link active navColor" aria-current="page" href="#">Logout</a>
