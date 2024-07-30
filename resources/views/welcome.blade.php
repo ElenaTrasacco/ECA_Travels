@@ -25,4 +25,19 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-evenly">
+            @forelse($travels as $travel)
+                <div class="col-12 col-md-3">
+                    <x-card :travel="$travel"/>
+                </div>
+            @empty
+                <div class="col-12 col-md-6">
+                    <h3>Non sono stati inseriti viaggi</h3>
+                </div>
+            @endforelse
+            
+        </div>
+    </div>
 </x-layout>
