@@ -28,6 +28,20 @@
         @enderror
         </div>
 
+        <div class="mb-3">
+            <label for="category" class="form-label">Categorie:</label>
+            <select class="form-control" aria-label="Categorie" id="category" wire:model.live="category" >
+                <option selected>Seleziona una categoria</option>
+                @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+              </select>
+           
+            @error('category')
+            <span class="text-danger">{{$message}}</span>
+            @enderror
+            </div>
+
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
         <textarea name="description" class="form-control" wire:model.live='description'></textarea>
