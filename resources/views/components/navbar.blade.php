@@ -12,20 +12,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
                 <li class="nav-item">
-                    <a class="nav-link active navColor" aria-current="page" href="{{ route('homepage') }}">Home</a>
+                    <a id="navLink" class="nav-link active navColor1 " aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active navColor" aria-current="page"
+                    <a id="navLink" class="nav-link active navColor1" aria-current="page"
                         href="{{route('travel.create')}}">Inserisci un annuncio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active navColor" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
+                    <a id="navLink" class="nav-link active navColor1" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
                 </li>
 
                 
 
                 <li class="dropdown">
-                    <a class="nav-link dropodown-toggle navColor" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
+                    <a id="navLink" class="nav-link dropodown-toggle navColor1" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
                     <ul class="dropdown-menu dropCustom">
                         @foreach ($categories as $category)
                         <li>

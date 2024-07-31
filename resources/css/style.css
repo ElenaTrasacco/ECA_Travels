@@ -36,8 +36,11 @@ body{
   
 } */
 
-.navColor{
-    color: var(--bluh) !important;
+.navColor1{
+    color: var(--bluh) !important ;
+}
+.navColor2{
+  color: var(--blubg) !important;
 }
 
 /* --------------------FOOTER ------------------------*/
