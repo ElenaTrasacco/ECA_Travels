@@ -52,11 +52,11 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5 d-flex justify-content-end">
+    {{-- <div class="container-fluid mt-5 d-flex justify-content-end">
         <div class="row">
             <div class="col-12 col-md-8 mt-5">
                <img class="dolomiti" src="https://www.dolomititour.com/images/slider/06-winter-urlaub/winter-urlaub.jpg" alt="">
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-layout>

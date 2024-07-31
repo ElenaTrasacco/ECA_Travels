@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row ">
             <div class="col-12 mt-5 d-flex justify-content-center">
-                <h1>titolo di effetto</h1>
+                <h1>ESCA TRAVELS</h1>
             </div>
             <div class="col-12">
                 <div class="d-flex justify-content-end">
@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row ">
             <div class="col-12 mt-5 p-0">
-                <img src="https://wips.plug.it/cips/initalia.virgilio.it/cms/2020/11/amalfi.jpg" alt="" class="bgCustom">
+                <img src="storage/media/bghomepage.png" alt="" class="bgCustom">
                {{-- <p>bg + cartina italia hoverabile</p> --}}
             </div>
         </div>

@@ -10,10 +10,10 @@
     </div>
 
     <div class="container-fluid mt-5">
-        <div class="row justify-content-around">
+        <div class="row">
             @forelse($travels as $travel)
-                <div class="col-12 col-md-3 mx-2 mb-4">
-                    <x-card :travel="$travel"/>
+                <div class="col-12 mb-4">
+                    <x-card2 :travel="$travel"/>
                 </div>
             @empty
                 <div class="col-12 col-md-6">
