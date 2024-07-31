@@ -52,7 +52,7 @@
                     </li>
                 @endguest
                 @auth
-                    <div class="dropdown">
+                    <div class="dropdown me-5">
                         <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <li class="nav-item">
                                 <a class="nav-link active navColor" aria-current="page" href="#"><i
@@ -62,17 +62,18 @@
                             </li>
                         
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu me-5">
                             <li class="nav-item">
                                 <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
                             </li>
                             @if(Auth::user()->is_revisor)
                                 <li class="nav-item">
-                                    <a class="nav-link active navColor" aria-current="page" href="{{route('revisor.index')}}
+                                    <a class="nav-link active navColor position-relative" aria-current="page" href="{{route('revisor.index')}}
                                     ">Revisiona
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
+                                
+                                    <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger pe-5">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
+                                </a>
 
-                                    </a>
                                 </li>
                             @endif
                             <li class="nav-item">
