@@ -1,4 +1,4 @@
-<div class="container-fluid containerLista d-flex justify-content-between">
+<div class="container-fluid containerLista d-flex justify-content-between shadow">
     <div class="boxminiList"></div>
     <div class="row px-3 rowLista">
 

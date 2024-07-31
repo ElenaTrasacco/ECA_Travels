@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row ">
             <div class="col-12 mt-5 d-flex justify-content-center">
-                <h1>ESCA TRAVELS</h1>
+                <h1>ECA TRAVELS</h1>
             </div>
 
         @if(session()->has('error'))
