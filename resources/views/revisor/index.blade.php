@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-3 ">
                 <div class="rounded shadow p-3">
-                    <h1 class="display-5 text-center pb-2">
+                    <h1 class="text-center pb-2">
                         Revisor dashboard
                     </h1>
                 </div>
@@ -11,7 +11,7 @@
         </div>
 
         @if(session()->has('message'))
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                 <div class="col-5 alert alert-success text-center shadow rounded">
                     {{session('message')}}
                 </div>
@@ -32,11 +32,11 @@
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <div>
-                        <h1>{{$travel_to_check->title }}</h1>
-                        <h3>Autore: {{$travel_to_check->user->name }} </h3>
-                        <h4>Prezzo:{{$travel_to_check->price }}</h4>
-                        <h4 class="fst-italic text-muted">Categoria:{{ $travel_to_check->category->name }}</h4>
-                        <p class="h6">Descrizione:{{$travel_to_check->description }}</p>
+                        <h2>{{$travel_to_check->title }}</h2>
+                        {{-- <h4>Autore: {{$travel_to_check->user->name }} </h4> --}}
+                        <h4>Prezzo: {{$travel_to_check->price }}</h4>
+                        {{-- <h4 class="fst-italic text-muted">Categoria:{{ $travel_to_check->category->name }}</h4> --}}
+                        <p class="h6">Descrizione: {{$travel_to_check->description }}</p>
                     </div>
                     <div class="d-flex pb-4 justify-content-around">
                         <form action="{{route('reject',['travel'=>$travel_to_check])}}" method="POST">

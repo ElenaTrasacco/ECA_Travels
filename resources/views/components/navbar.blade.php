@@ -32,7 +32,7 @@
                             <a class="dropdown-item dropCustom" href="{{route('travel.category',['category'=>$category])}}">{{$category->name}}</a>
                         </li>
                         
-                          @endforeach
+                        @endforeach
 
                     </ul>
                     </button>
@@ -51,33 +51,32 @@
                         <a class="nav-link active navColor" aria-current="page" href="{{ route('login') }}">Login</a>
                     </li>
                 @endguest
-                @auth
-                    <div class="dropdown me-5">
-                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <li class="nav-item">
-                                <a class="nav-link active navColor" aria-current="page" href="#"><i
-                                        class="fa-solid fa-user">
-                                        {{ Auth::user()->name }}</i>
-                                </a>
-                            </li>
-                        
-                        </button>
-                        <ul class="dropdown-menu me-5">
-                            <li class="nav-item">
-                                <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
-                            </li>
-                            @if(Auth::user()->is_revisor)
-                                <li class="nav-item">
-                                    <a class="nav-link active navColor position-relative" aria-current="page" href="{{route('revisor.index')}}
-                                    ">Revisiona
-                                
-                                    <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger pe-5">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
-                                </a>
 
-                                </li>
-                            @endif
+                @auth
+                <div class="dropstart">
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link active navColor" aria-current="page" href="#"><i
+                                    class="fa-solid fa-user">
+                                    {{ Auth::user()->name }}</i>
+                            </a>
+                        </li>
+                    </button>
+                    <ul class="dropdown-menu me-3 dropCustom1">
+                        <li class="nav-item">
+                            <a class="nav-link active dropCustomLink" aria-current="page" href="#">Profilo</a>
+                        </li>
+                        @if(Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link active navColor" aria-current="page" href="#"
+                                <a class="nav-link active dropCustomLink" aria-current="page" href="{{route('revisor.index')}}
+                                ">Revisiona
+                                <span class="position-absolute top-4 start-200 translate-end badge rounded-pill bg-info mx-2">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
+                            </a>
+                            </li>
+                            @endif
+
+                            <li class="nav-item">
+                                <a class="nav-link active dropCustomLink" aria-current="page" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                                 <form action="{{ route('logout') }}" method="POST" id="form-logout">
                                     @csrf 
@@ -101,3 +100,29 @@
 </nav>
 
 
+
+
+
+
+
+{{-- @auth
+<div class="dropleft me-5">
+    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item">
+            <a class="nav-link active navColor" aria-current="page" href="#"><i
+                    class="fa-solid fa-user">
+                    {{ Auth::user()->name }}</i>
+            </a>
+        </li>
+    </button>
+    <ul class="dropdown-menu me-5">
+        <li class="nav-item">
+            <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
+        </li>
+        @if(Auth::user()->is_revisor)
+            <li class="nav-item">
+                <a class="nav-link active navColor position-relative" aria-current="page" href="{{route('revisor.index')}}
+                ">Revisiona</a>
+                <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
+            </li>
+        @endif --}}

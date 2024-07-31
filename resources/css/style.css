@@ -1,3 +1,5 @@
+/* --------------------GENERALE ------------------------*/
+
 :root{
     --bluh: rgb(24, 122, 241);
     --blutxt: rgb(0, 93, 156);
@@ -14,11 +16,20 @@ body{
     color: rgb(1, 94, 156);
 }
 
+/* --------------------NAVBAR ------------------------*/
+
 .navCustom{
     background-color: #16a2ff4f;
     width: 100%;
 }
 
+.dropCustom1{
+  background-color: rgba(24, 122, 241, 0.977);
+}
+
+.dropCustomLink{
+  color: var(--blubg) !important;
+}
 
 /* .navCustom.scroll{
   background-color: #fb16ff4f;
@@ -29,6 +40,8 @@ body{
     color: var(--bluh) !important;
 }
 
+/* --------------------FOOTER ------------------------*/
+
 .footerCustom{
     background-color: #16a2ff4f;
 }
@@ -38,7 +51,7 @@ body{
     color: var(--blubg);
 }
 
-
+/* --------------------HOMEPAGE ------------------------*/
 
 .titolo{
     color: var(--blutxt);
@@ -110,7 +123,7 @@ body{
 
 /* ----------------- fine button 1 --------------------- */
 
-
+/* ---------------------------------AUTENTICAZIONE ------------------------------*/
 
 /* ----------------- Inizio form login --------------------- */
 
@@ -347,6 +360,7 @@ body{
 
 /* ----------------- Fine form register --------------------- */
 
+/* --------------------------- CARDS -----------------------------*/
 .bgCustom{
   width: 100%;
 }
@@ -406,7 +420,7 @@ body{
  }
 /* ---------------fine btn card------------------- */
 
-/* -------------------- inizio card2 -------------------*/
+/* ------------------------- CARD LISTA ------------------------*/
 /* .card2{
   width: 100%;
  height: 200px;
@@ -449,44 +463,6 @@ body{
   width: 120px;
 }
 
-/* .balanceHeading {
-  font-size: 8px;
-  color: rgb(214, 214, 214);
-  font-weight: 100;
-  letter-spacing: 0.6px;
-}
-.balance {
-  font-size: 13.5px;
-  color: white;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-} */
-
-/* .classe4 {
-  padding: 1px 15px;
-  border-radius: 20px;
-  background-color: #c083eb;
-  color: white;
-  border: none;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.classe4:hover {
-  background-color: whitesmoke;
-  color: #9c59cc;
-} */
-/* .plussign {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 
 /* -------------------- fine card2 -------------------*/
 
@@ -497,7 +473,7 @@ body{
 
 
 
-
+/* --------------------BOH ------------------------*/
 .page-link{
   background-color:var(--blutxt);
   color: var(--blubg);
