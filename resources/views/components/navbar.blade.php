@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navCustom fixed-top justify-content-between" data-bs-target>
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand"href="{{ route('homepage') }}">
             <i class="fa-solid fa-route fa-2x" style="color: #187af1;"></i>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
