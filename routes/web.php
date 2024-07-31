@@ -12,7 +12,7 @@ Route::get('/travel/index',[TravelController::class,'index'])->name('travel.inde
 Route::get('/travel/show/{travel}',[TravelController::class,'show'])->name('travel.show');
 Route::get('/travel/category/{category}',[TravelController::class,'byCategory'])->name('travel.category');
 
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{travel}',[RevisorController::class,'accept'])->name('accept');
 Route::patch('/reject/{travel}',[RevisorController::class,'reject'])->name('reject');
 

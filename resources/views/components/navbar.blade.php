@@ -67,10 +67,14 @@
                                 <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
                             </li>
                             @if(Auth::user()->is_revisor)
-                            <li class="nav-item">
-                                <a class="nav-link active navColor" aria-current="page" href="{{route('revisor.index')}}">Revisiona</a>
-                            </li>
-                        @endif
+                                <li class="nav-item">
+                                    <a class="nav-link active navColor" aria-current="page" href="{{route('revisor.index')}}
+                                    ">Revisiona
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
+
+                                    </a>
+                                </li>
+                            @endif
                             <li class="nav-item">
                                 <a class="nav-link active navColor" aria-current="page" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>

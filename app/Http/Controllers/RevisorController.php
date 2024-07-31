@@ -6,7 +6,7 @@ use App\Models\Travel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class RevisorController extends Controller
+class RevisorController extends Controller 
 {
     public function index()
     {

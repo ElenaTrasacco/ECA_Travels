@@ -4,6 +4,10 @@
             <div class="col-12 mt-5 d-flex justify-content-center">
                 <h1>ESCA TRAVELS</h1>
             </div>
+
+        @if(session()->has('error'))
+            <div class="alert alert-danger text-center shadow rounded">{{session('error')}}</div>
+        @endif
             <div class="col-12">
                 <div class="d-flex justify-content-end">
                         <a class="btn cta" href="{{route('travel.create')}}"> Inserisci Annuncio

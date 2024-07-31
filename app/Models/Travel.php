@@ -25,4 +25,8 @@ class Travel extends Model
         $this->save();
         return true;
     }
+    public static function toBeRevisedCount()
+    {
+        return Travel::where('is_accepted',null)->count();
+    } 
 }
