@@ -22,6 +22,8 @@
                     <a class="nav-link active navColor" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
                 </li>
 
+                
+
                 <li class="dropdown">
                     <a class="nav-link dropodown-toggle navColor" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
                     <ul class="dropdown-menu dropCustom">
@@ -58,11 +60,17 @@
                                         {{ Auth::user()->name }}</i>
                                 </a>
                             </li>
+                        
                         </button>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
                             </li>
+                            @if(Auth::user()->is_revisor)
+                            <li class="nav-item">
+                                <a class="nav-link active navColor" aria-current="page" href="{{route('revisor.index')}}">Revisiona</a>
+                            </li>
+                        @endif
                             <li class="nav-item">
                                 <a class="nav-link active navColor" aria-current="page" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>

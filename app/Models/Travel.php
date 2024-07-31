@@ -19,4 +19,10 @@ class Travel extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    public function setAccepted($value){
+        $this->is_accepted=$value;
+        $this->save();
+        return true;
+    }
 }

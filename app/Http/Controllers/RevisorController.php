@@ -11,6 +11,18 @@ class RevisorController extends Controller
     public function index()
     {
         $travel_to_check = Travel::where('is_accepted', null)->first();
-        return view('revisor.index', compact('article_to_check'));  
+        return view('revisor.index', compact('travel_to_check'));  
+    }
+
+    public function accept(Travel $travel)
+    {
+        $travel->setAccepted(true);
+        return redirect()->back()->with('message',"hai accettato l'articolo $travel->title");
+    }
+
+    public function reject(Travel $travel)
+    {
+        $travel->setAccepted(false);
+        return redirect()->back()->with('message',"hai rifiutato l'articolo $travel->title");
     }
 }
