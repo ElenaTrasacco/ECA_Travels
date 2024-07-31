@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navCustom fixed-top justify-content-between">
+<nav class="navbar navbar-expand-lg navCustom fixed-top justify-content-between" data-bs-target>
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <i class="fa-solid fa-route fa-2x" style="color: #187af1;"></i>
@@ -23,11 +23,11 @@
                 </li>
 
                 <li class="dropdown">
-                    <a class="nav-link dropodown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropodown-toggle navColor" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
+                    <ul class="dropdown-menu dropCustom">
                         @foreach ($categories as $category)
                         <li>
-                            <a class="dropdown-item" href="{{route('travel.category',['category'=>$category])}}">{{$category->name}}</a>
+                            <a class="dropdown-item dropCustom" href="{{route('travel.category',['category'=>$category])}}">{{$category->name}}</a>
                         </li>
                         
                           @endforeach
@@ -86,3 +86,5 @@
 
     </div>
 </nav>
+
+

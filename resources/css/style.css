@@ -1,7 +1,7 @@
 :root{
     --bluh: rgb(24, 122, 241);
-    --blutxt: #015e9c;
-    --blubg: #caf0f8cd;
+    --blutxt: rgb(0, 93, 156);
+    --blubg: rgba(202, 240, 248, 0.804);
 }
  h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5{
     font-family: "Bona Nova SC", serif;
@@ -11,14 +11,19 @@
 body{
     font-family: "Lora", serif;
     background-color: #caf0f8cd;
-    color: #015e9c;
+    color: rgb(1, 94, 156);
 }
 
 .navCustom{
     background-color: #16a2ff4f;
     width: 100%;
-    
 }
+
+
+/* .navCustom.scroll{
+  background-color: #fb16ff4f;
+  
+} */
 
 .navColor{
     color: var(--bluh) !important;
@@ -37,6 +42,10 @@ body{
 
 .titolo{
     color: var(--blutxt);
+}
+
+.authFont{
+  font-size: larger;
 }
 
 /* ----------------- inizio button 1--------------------- */
@@ -58,7 +67,7 @@ body{
     left: 0;
     display: block;
     border-radius: 50px;
-    background: rgba(24, 180, 241, 0.398);
+    background: rgba(1, 112, 249, 0.371);
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
@@ -88,7 +97,7 @@ body{
   
   .cta:hover:before {
     width: 100%;
-    background:rgba(24, 180, 241, 0.398);
+    background:rgba(1, 112, 249, 0.371);
   }
   
   .cta:hover svg {
@@ -101,18 +110,27 @@ body{
 
 /* ----------------- fine button 1 --------------------- */
 
+
+
 /* ----------------- Inizio form login --------------------- */
+
+.dolomiti{
+  width: 900px;
+  display: flex;
+  justify-content: end;
+}
 
 
 .form_main {
-  width: 220px;
+  width: 400px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--blubg);
   padding: 30px 30px 30px 30px;
-  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.062);
+  box-shadow: 5px 5px 40px var(--bluh);
   position: relative;
   overflow: hidden;
 }
@@ -122,7 +140,7 @@ body{
   content: "";
   width: 300px;
   height: 300px;
-  background-color: rgb(209, 193, 255);
+  background-color: rgba(24, 122, 241, 0.528);
   transform: rotate(45deg);
   left: -180px;
   bottom: 30px;
@@ -133,7 +151,7 @@ body{
 
 .heading {
   font-size: 2em;
-  color: #2e2e2e;
+  color: var(--blubg);
   font-weight: 700;
   margin: 5px 0 10px 0;
   z-index: 2;
@@ -158,9 +176,9 @@ body{
   height: 30px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgb(173, 173, 173);
+  border-bottom: 2px solid var(--bluh);
   margin: 10px 0;
-  color: black;
+  color: var(--blutxt);
   font-size: .8em;
   font-weight: 500;
   box-sizing: border-box;
@@ -169,11 +187,11 @@ body{
 
 .inputField:focus {
   outline: none;
-  border-bottom: 2px solid rgb(199, 114, 255);
+  border-bottom: 2px solid var(--blutxt);
 }
 
 .inputField::placeholder {
-  color: rgb(80, 80, 80);
+  color: var(--blutxt);
   font-size: 1em;
   font-weight: 500;
 }
@@ -183,9 +201,9 @@ body{
   position: relative;
   width: 100%;
   border: none;
-  background-color: rgb(162, 104, 255);
+  background-color: var(--bluh);
   height: 30px;
-  color: white;
+  color: var(--blubg);
   font-size: .8em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -194,10 +212,12 @@ body{
 }
 
 #button:hover {
-  background-color: rgb(126, 84, 255);
+  background-color: var(--blubg);
+  color: var(--blutxt);
+  border: solid 2px var(--blutxt);
 }
 
-.forgotLink {
+/* .forgotLink {
   z-index: 2;
   font-size: .7em;
   font-weight: 500;
@@ -205,10 +225,207 @@ body{
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 20px;
-}
+} */
 
 /* ----------------- Fine form login --------------------- */
+
+/* ----------------- Inizio form register --------------------- */
+
+.field{
+  width: 800px;
+  height: 70%;
+  display: flex;
+  justify-content: end;
+}
+
+.form_mainR {
+  width: 800px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blubg);
+  padding: 30px 30px 30px 30px;
+  box-shadow: 5px 5px 40px var(--bluh);
+  position: relative;
+  overflow: hidden;
+}
+
+.form_mainR::before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: rgba(24, 122, 241, 0.528);
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+}
+
+/* .heading {
+  font-size: 2em;
+  color: var(--blubg);
+  font-weight: 700;
+  margin: 5px 0 10px 0;
+  z-index: 2;
+} */
+
+.inputContainerR {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.inputIconR {
+  position: absolute;
+  left: 3px;
+}
+
+.inputFieldR {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--bluh);
+  margin: 10px 0;
+  color: var(--blutxt);
+  font-size: .8em;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.inputFieldR:focus {
+  outline: none;
+  border-bottom: 2px solid var(--blutxt);
+}
+
+.inputFieldR::placeholder {
+  color: var(--blutxt);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#button {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: var(--bluh);
+  height: 30px;
+  color: var(--blubg);
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#button:hover {
+  background-color: var(--blubg);
+  color: var(--blutxt);
+  border: solid 2px var(--blutxt);
+}
+
+/* .forgotLink {
+  z-index: 2;
+  font-size: .7em;
+  font-weight: 500;
+  color: rgb(44, 24, 128);
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+} */
+
+/* ----------------- Fine form register --------------------- */
 
 .bgCustom{
   width: 100%;
 }
+
+.dropCustom{
+  background-color: var(--bluh);
+  color: var(--blubg);
+}
+
+.dropCustom:hover{
+  padding: 2px;
+  background-image: linear-gradient(to bottom, #caf0f8cd 0%, rgb(24, 122, 241) 100%);
+  color: rgb(4, 62, 101);
+ 
+}
+
+.cta{
+  color: var(--blutxt);
+}
+
+.cardCustom{
+  background-color: rgba(24, 122, 241, 0.131);
+  color: var(--blutxt);
+}
+
+/* -----------inizio btn card-------------- */
+.buttonCard {
+  border: none;
+  color: rgb(212, 223, 226);
+  background-image: linear-gradient(30deg, rgb(5, 96, 208), #2ed1fa);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+ }
+ 
+ .buttonCard:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+ }
+ 
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }
+/* ---------------fine btn card------------------- */
+
+
+.page-link{
+  background-color:var(--blutxt);
+  color: var(--blubg);
+}
+
+.page-link:hover{
+  background-color: #2ebdfa;
+  border: #015e9c;
+  color: var(--blutxt);
+}
+
+/* .ciao{
+  background-color:var(--blutxt);
+  color: var(--blubg);
+}
+
+.ciao:hover{
+  background-color: #2ebdfa;
+  border: #015e9c;
+  color: var(--blutxt);
+}  */
+

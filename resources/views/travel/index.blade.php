@@ -9,10 +9,10 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row justify-content-evenly">
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-around">
             @forelse($travels as $travel)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 mx-2 mb-4">
                     <x-card :travel="$travel"/>
                 </div>
             @empty

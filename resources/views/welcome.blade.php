@@ -21,13 +21,15 @@
         <div class="row ">
             <div class="col-12 mt-5 p-0">
                 <img src="https://wips.plug.it/cips/initalia.virgilio.it/cms/2020/11/amalfi.jpg" alt="" class="bgCustom">
-               <p>bg + cartina italia hoverabile</p>
+               {{-- <p>bg + cartina italia hoverabile</p> --}}
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5"> 
+        <h3 class="my-5 text-center">Ultimi 3 annunci inseriti:</h3>
         <div class="row justify-content-evenly">
+           
             @forelse($travels as $travel)
                 <div class="col-12 col-md-3">
                     <x-card :travel="$travel"/>
