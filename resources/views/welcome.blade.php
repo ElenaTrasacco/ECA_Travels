@@ -8,6 +8,9 @@
         @if(session()->has('error'))
             <div class="alert alert-danger text-center shadow rounded">{{session('error')}}</div>
         @endif
+        @if(session()->has('sent'))
+        <div class="alert alert-success text-center shadow rounded">{{session('sent')}}</div>
+        @endif
             <div class="col-12">
                 <div class="d-flex justify-content-end">
                         <a class="btn cta" href="{{route('travel.create')}}"> Inserisci Annuncio

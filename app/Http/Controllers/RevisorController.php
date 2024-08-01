@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Travel;
+use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller 
 {
@@ -24,5 +29,16 @@ class RevisorController extends Controller
     {
         $travel->setAccepted(false);
         return redirect()->back()->with('message',"Hai rifiutato l'articolo $travel->title");
+    }
+    public function becomeRevisor()
+    {
+        Mail::to('eca@travel.com')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->route('homepage')->with('sent','richiesta inviata con successo');
+    }
+
+    public function makeRevisor(User $user)
+    {
+        Artisan::call('app:make-user-revisor',['email'=>$user->email]);
+        return redirect()->back();
     }
 }

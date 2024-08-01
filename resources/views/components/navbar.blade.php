@@ -21,6 +21,7 @@
                 <li class="nav-item">
                     <a id="navLink" class="nav-link active navColor1" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
                 </li>
+               
 
                 
 
@@ -53,6 +54,10 @@
                 @endguest
 
                 @auth
+                <li class="nav-item">
+                    <a id="navLink" class="nav-link active  " aria-current="page"
+                        href="{{route('become.revisor')}}">Diventa un revisore</a>
+                </li>
                 <div class="dropstart">
                     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <li class="nav-item">
