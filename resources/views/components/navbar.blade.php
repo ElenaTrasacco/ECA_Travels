@@ -75,7 +75,7 @@
                     </button>
                     <ul class="dropdown-menu me-3 dropCustom1">
                         <li class="nav-item">
-                            <a class="nav-link active dropCustomLink" aria-current="page" href="#">Profilo</a>
+                            <a class="nav-link active dropCustomLink" aria-current="page" href="{{route('dashboard')}}">Profilo</a>
                         </li>
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
