@@ -16,47 +16,52 @@
                 </li>
                 <li class="nav-item">
                     <a id="navLink" class="nav-link active navColor1" aria-current="page"
-                        href="{{route('travel.create')}}">Inserisci un annuncio</a>
+                        href="{{ route('travel.create') }}">Inserisci un annuncio</a>
                 </li>
                 <li class="nav-item">
-                    <a id="navLink" class="nav-link active navColor1" aria-current="page" href="{{route('travel.index')}}">Lista annunci</a>
+                    <a id="navLink" class="nav-link active navColor1" aria-current="page" href="{{ route('travel.index') }}">Lista annunci</a>
                 </li>
-               
-
-                
-
+ 
                 <li class="dropdown">
                     <a id="navLink" class="nav-link dropodown-toggle navColor1" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Categorie</a>
                     <ul class="dropdown-menu dropCustom">
-                        @foreach ($categories as $category)
-                        <li>
-                            <a class="dropdown-item dropCustom" href="{{route('travel.category',['category'=>$category])}}">{{$category->name}}</a>
-                        </li>
-                        
-                        @endforeach
+                           @foreach ($categories as $category)
+                <li>
+                    <a class="dropdown-item dropCustom"
+                        href="{{ route('travel.category', ['category' => $category]) }}">{{ $category->name }}</a>
+                </li>
+                @endforeach
 
-                    </ul>
-                    </button>
+                </ul>
+                </button>
+                </li>
+                <li>
+                    <form class="d-flex" role="search" action="{{route ('travel.searched')}}" method="GET">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </li>
             </ul>
         </div>
 
-        <div class="navbar-nav ">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-                <li class="nav-item">
-                    @guest
-                        <a class="nav-link active navColor" aria-current="page"
-                            href="{{ route('register') }}">Registrati</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active navColor" aria-current="page" href="{{ route('login') }}">Login</a>
-                    </li>
-                @endguest
 
-                @auth
+
+
+    <div class="navbar-nav ">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item">
+                @guest
+                    <a class="nav-link active navColor" aria-current="page" href="{{ route('register') }}">Registrati</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active navColor" aria-current="page" href="{{ route('login') }}">Login</a>
+                </li>
+            @endguest
+
+            @auth
                 <li class="nav-item">
                     <a id="navLink" class="nav-link active  " aria-current="page"
-                        href="{{route('become.revisor')}}">Diventa un revisore</a>
+                        href="{{ route('become.revisor') }}">Diventa un revisore</a>
                 </li>
                 <div class="dropstart">
                     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,35 +76,33 @@
                         <li class="nav-item">
                             <a class="nav-link active dropCustomLink" aria-current="page" href="#">Profilo</a>
                         </li>
-                        @if(Auth::user()->is_revisor)
+                        @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link active dropCustomLink" aria-current="page" href="{{route('revisor.index')}}
+                                <a class="nav-link active dropCustomLink" aria-current="page"
+                                    href="{{ route('revisor.index') }}
                                 ">Revisiona
-                                <span class="position-absolute top-4 start-200 translate-end badge rounded-pill bg-info mx-2">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
-                            </a>
+                                    <span
+                                        class="position-absolute top-4 start-200 translate-end badge rounded-pill bg-info mx-2">{{ \App\Models\Travel::toBeRevisedCount() }}</span>
+                                </a>
                             </li>
-                            @endif
+                        @endif
 
-                            <li class="nav-item">
-                                <a class="nav-link active dropCustomLink" aria-current="page" href="#"
-                                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-                                <form action="{{ route('logout') }}" method="POST" id="form-logout">
-                                    @csrf 
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                @endauth
-            </ul>
-        </div>
-
-
+                        <li class="nav-item">
+                            <a class="nav-link active dropCustomLink" aria-current="page" href="#"
+                                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                            <form action="{{ route('logout') }}" method="POST" id="form-logout">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            @endauth
+        </ul>
+    </div>
 
 
-        {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
+
+
 
     </div>
 </nav>
@@ -124,7 +127,7 @@
         <li class="nav-item">
             <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
         </li>
-        @if(Auth::user()->is_revisor)
+        @if (Auth::user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link active navColor position-relative" aria-current="page" href="{{route('revisor.index')}}
                 ">Revisiona</a>

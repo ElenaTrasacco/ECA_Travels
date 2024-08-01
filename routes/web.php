@@ -18,6 +18,7 @@ Route::patch('/reject/{travel}',[RevisorController::class,'reject'])->name('reje
 
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+Route::get('/search/travel', [PublicController::class, 'searchTravel'])->name('travel.searched');
 
 
 

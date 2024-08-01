@@ -21,8 +21,7 @@ class TravelController extends Controller implements HasMiddleware
     
     public function index()
     {
-        
-        $travels = Travel::orderBy('created_at','desc')->paginate(4);
+        $travels = Travel::where('is_accepted', true)->orderBy('created_at','desc')->paginate(4);
         return view('travel.index',compact('travels'));
     }
 
@@ -77,6 +76,11 @@ class TravelController extends Controller implements HasMiddleware
 
     public function byCategory(Category $category)
     {
-        return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
+        
+        $travels = $category->travels->where('is_accepted', true);
+        return view('travel.byCategory', compact('travels', 'category'));
+
+        // return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
+
     }
 }
