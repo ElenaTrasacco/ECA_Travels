@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navCustom fixed-top justify-content-between" data-bs-target>
     <div class="container-fluid">
         <a class="navbar-brand nav-link navColor1 "href="{{ route('homepage') }}">
-            <i class="fa-solid fa-route fa-2x" "></i>
+            <i class="fa-solid fa-route fa-2x"></i>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+            <ul class="navbar-nav fs-5">
                 <li class="nav-item">
                     <a id="navLink" class="nav-link active navColor1 " aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
@@ -36,10 +36,7 @@
                 </button>
                 </li>
                 <li>
-                    <form class="d-flex" role="search" action="{{route ('travel.searched')}}" method="GET">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                  @livewire('search-bar') 
                 </li>
             </ul>
         </div>
@@ -49,6 +46,10 @@
 
     <div class="navbar-nav ">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item">
+                <a id="navLink" class="nav-link active navColor1" aria-current="page"
+                    href="">Contattaci</a>
+            </li>
             <li class="nav-item">
                 @guest
                     <a class="nav-link active navColor" aria-current="page" href="{{ route('register') }}">Registrati</a>
@@ -110,27 +111,3 @@
 
 
 
-
-
-
-{{-- @auth
-<div class="dropleft me-5">
-    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <li class="nav-item">
-            <a class="nav-link active navColor" aria-current="page" href="#"><i
-                    class="fa-solid fa-user">
-                    {{ Auth::user()->name }}</i>
-            </a>
-        </li>
-    </button>
-    <ul class="dropdown-menu me-5">
-        <li class="nav-item">
-            <a class="nav-link active navColor" aria-current="page" href="#">Profilo</a>
-        </li>
-        @if (Auth::user()->is_revisor)
-            <li class="nav-item">
-                <a class="nav-link active navColor position-relative" aria-current="page" href="{{route('revisor.index')}}
-                ">Revisiona</a>
-                <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Travel::toBeRevisedCount()}}</span> 
-            </li>
-        @endif --}}

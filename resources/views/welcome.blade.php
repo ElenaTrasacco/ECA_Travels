@@ -24,11 +24,13 @@
         </div>
     </div>
 
-    <div class="container-fluid vh-100">
+    <div class="container-fluid">
         <div class="row ">
             <div class="col-12 mt-5 p-0">
-                <img src="storage/media/bghomepage.png" alt="" class="bgCustom">
+                <img src="/storage/media/bghomepage.png" alt="" class="bgCustom"> 
+                {{-- <img src="https://images.unsplash.com/photo-1577600867469-30cc013db252?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fHBvcnRvZmlub3xlbnwwfHwwfHx8MA%3D%3D" alt="" class="bgCustom">  --}}
                {{-- <p>bg + cartina italia hoverabile</p> --}}
+               {{-- https://images.pexels.com/photos/157248/pexels-photo-157248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 --}}
             </div>
         </div>
     </div>

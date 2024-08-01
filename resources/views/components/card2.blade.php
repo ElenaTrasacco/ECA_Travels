@@ -3,7 +3,7 @@
     <div class="row px-3 rowLista">
 
         <div class="col-md-1 categoryList">
-            <h5 class="verticalTxt">{{ $travel->category->name }}</h5>
+            <h5 class="verticalTxt">{{$travel->category->name}}</h5>
         </div>
 
 

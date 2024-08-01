@@ -34,9 +34,9 @@
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <div>
                         <h2>{{$travel_to_check->title }}</h2>
-                        {{-- <h4>Autore: {{$travel_to_check->user->name }} </h4> --}}
+                        <h4>Autore: {{$travel_to_check->user->name }} </h4>
                         <h4>Prezzo: {{$travel_to_check->price }}</h4>
-                        {{-- <h4 class="fst-italic text-muted">Categoria:{{ $travel_to_check->category->name }}</h4> --}}
+                        <h4 class="fst-italicß">Categoria: {{ $travel_to_check->category->name }}</h4>
                         <p class="h6">Descrizione: {{$travel_to_check->description }}</p>
                     </div>
                     <div class="d-flex pb-4 justify-content-around">

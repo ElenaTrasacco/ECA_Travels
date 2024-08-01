@@ -18,7 +18,7 @@ class TravelController extends Controller implements HasMiddleware
     public static function middleware() : array {
         return [new Middleware("auth" , only:["create"])];
     }
-    
+
     public function index()
     {
         $travels = Travel::where('is_accepted', true)->orderBy('created_at','desc')->paginate(4);
@@ -29,7 +29,7 @@ class TravelController extends Controller implements HasMiddleware
      * Show the form for creating a new resource.
      */
     public function create()
-    {   
+    {
 
         return view('travel.create');
     }
@@ -76,9 +76,9 @@ class TravelController extends Controller implements HasMiddleware
 
     public function byCategory(Category $category)
     {
-        
+
         $travels = $category->travels->where('is_accepted', true);
-        return view('travel.byCategory', compact('travels', 'category'));
+        return view('travel.category', compact('travels', 'category'));
 
         // return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
 

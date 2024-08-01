@@ -1,8 +1,9 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container-fluid p-0">
+        <img class="colosseo" src="/storage/media/headL2.jpeg" alt="">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 mt-5">
-                <h2 class="titolo text-center">
+                <h2 class="titolo2 text-center">
                     Viaggi inseriti
                 </h2>
             </div>
