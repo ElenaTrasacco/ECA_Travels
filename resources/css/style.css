@@ -107,7 +107,11 @@ color: var(--blutxt);
 }
 
 .bgCustom{
-  width: 100%;
+  
+  background-image: url('/public/storage/amalfi_hd.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ----------------- inizio button 1--------------------- */
@@ -539,3 +543,17 @@ color: var(--blutxt);
   color: var(--blutxt);
 }  */
 
+/* ----------------Inizio css mappa--------------- */
+svg path{
+  cursor: pointer;
+  /* stroke: aqua;
+  stroke-width: .6; */
+  
+}
+
+svg path:hover{
+  fill: pink;
+  transition: .4s;
+}
+
+/* -------------------fine css mappa----------------- */
