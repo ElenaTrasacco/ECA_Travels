@@ -12,9 +12,10 @@ class SearchBar extends Component
     public function render()
     {
         $results = [];
-        if(strlen($this->search) >= 1){
+        if($this->search){
             $results = Travel::where('title', 'like', '%' .$this->search. '%')->limit(5)->get();
-            
+            $results = Travel::where('description', 'like', '%' .$this->search. '%')->limit(5)->get();
+            $results = Travel::where('category_id', 'like', '%' .$this->search. '%')->limit(5)->get();
         }
         return view('livewire.search-bar', [
             'travels' => $results

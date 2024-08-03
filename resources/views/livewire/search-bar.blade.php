@@ -11,7 +11,9 @@
             @foreach ($travels as $travel)
             <div class="px-3 py-1 border-bottom dropSearch">
                 <div class="d-flex flex-column ml-3 ">
-                    <a class="dropSearchTXT" href="{{route('travel.searched', $travel)}}">{{$travel->title}} </a>
+                    <a class="dropSearchTXT" href="{{route('travel.show', $travel)}}">{{$travel->title}} </a>
+                    <a class="dropSearchTXT" href="{{route('travel.show', $travel)}}">{{$travel->description}} </a>
+                    <a class="dropSearchTXT" href="{{route('travel.category', $travel)}}">{{$travel->category->name}} </a>
                 </div>
             </div>
             @endforeach

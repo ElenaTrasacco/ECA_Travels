@@ -12,7 +12,7 @@
 
 body{
     font-family: "Lora", serif;
-    background-color: #caf0f8cd;
+    background-color: var(--blubg);
     color: rgb(1, 94, 156);
 }
 
@@ -63,7 +63,7 @@ color: var(--blutxt);
 
 /* .navCustom.scroll{
   background-color: #fb16ff4f;
-  
+
 } */
 
 .navColor1{
@@ -107,12 +107,32 @@ color: var(--blutxt);
 }
 
 .bgCustom{
-  
   background-image: url('/public/storage/amalfi_hd.png');
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  /* background-color: green; */
 }
+
+
+/* ----------------Inizio mappa--------------- */
+svg path{
+  cursor: pointer;
+  fill: var(--blutxt);
+  /* stroke: aqua;
+  stroke-width: .6; */
+}
+
+svg path:hover{
+  fill: var(--blubg);
+  transition: .4s;
+}
+
+
+
+/* -------------------fine mappa----------------- */
+
 
 /* ----------------- inizio button 1--------------------- */
 
@@ -125,7 +145,7 @@ color: var(--blutxt);
     background: none;
     cursor: pointer;
   }
-  
+
   .cta:before {
     content: "";
     position: absolute;
@@ -138,16 +158,16 @@ color: var(--blutxt);
     height: 45px;
     transition: all 0.3s ease;
   }
-  
+
   .cta span {
     position: relative;
     font-family: "Lora", serif;
-   
+
     font-weight: 700;
     letter-spacing: 0.05em;
     color: var(--blutxt);
   }
-  
+
   .cta svg {
     position: relative;
     top: 0;
@@ -160,16 +180,16 @@ color: var(--blutxt);
     transform: translateX(-5px);
     transition: all 0.3s ease;
   }
-  
+
   .cta:hover:before {
     width: 100%;
     background:rgba(1, 112, 249, 0.371);
   }
-  
+
   .cta:hover svg {
     transform: translateX(0);
   }
-  
+
   .cta:active {
     transform: scale(0.95);
   }
@@ -181,7 +201,100 @@ color: var(--blutxt);
   width: 150%;
 }
 
+/*---------------- fine btn preferiti --------------*/
 
+.heart-container {
+  
+  --heart-color: rgb(91, 173, 255);
+  position: relative;
+  width: 30px;
+  height: 30px;
+  transition: .3s;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+  
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.heart-container .svg-outline,
+.heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+  display: block
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+  display: block
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*---------------- fine btn preferiti --------------*/
 
 /* ---------------------AUTENTICAZIONE ---------------------*/
 
@@ -421,7 +534,7 @@ color: var(--blutxt);
   padding: 2px;
   background-image: linear-gradient(to bottom, #caf0f8cd 0%, rgb(24, 122, 241) 100%);
   color: rgb(4, 62, 101);
- 
+
 }
 
 .cta{
@@ -435,6 +548,8 @@ color: var(--blutxt);
 
 /* -----------inizio btn card-------------- */
 .buttonCard {
+
+  width: 180px;
   border: none;
   color: rgb(212, 223, 226);
   background-image: linear-gradient(30deg, rgb(5, 96, 208), #2ed1fa);
@@ -444,23 +559,23 @@ color: var(--blutxt);
   font-size: 17px;
   padding: 0.6em 1.5em;
  }
- 
+
  .buttonCard:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
  }
- 
+
  @keyframes pulse512 {
   0% {
    box-shadow: 0 0 0 0 #05bada66;
   }
- 
+
   70% {
    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
   }
- 
+
   100% {
    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
@@ -477,7 +592,7 @@ color: var(--blutxt);
   writing-mode:vertical-lr;
   text-orientation:sideways;
   font-size: small;
-  font-weight:bolder; 
+  font-weight:bolder;
   position: relative;
   word-wrap:break-word;
   font-family: "Rubik Mono One";
@@ -505,6 +620,7 @@ color: var(--blutxt);
 .rowLista{
   width: 100%;
   align-items: center;
+  padding-right: 0px;
 }
 .imgLista {
   width: 150px;
@@ -543,17 +659,13 @@ color: var(--blutxt);
   color: var(--blutxt);
 }  */
 
-/* ----------------Inizio css mappa--------------- */
-svg path{
-  cursor: pointer;
-  /* stroke: aqua;
-  stroke-width: .6; */
-  
+/*---------------- inizio dashboard --------------*/
+.bgDash{ 
+  height: 500px; 
+  display: flex;
+  justify-content: space-between;
 }
 
-svg path:hover{
-  fill: pink;
-  transition: .4s;
-}
+/*---------------- fine dashboard --------------*/
 
-/* -------------------fine css mappa----------------- */
+

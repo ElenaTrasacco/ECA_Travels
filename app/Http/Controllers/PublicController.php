@@ -27,6 +27,8 @@ class PublicController extends Controller implements HasMiddleware
         $travels= Travel::search($query)->where('is_accepted', true)->paginate(10);
         return view('travel.searched', ['travels'=> $travels,'query'=>$query]);
     }
+
+
     public function dashboard(){
         return view('auth.dashboard');
     }

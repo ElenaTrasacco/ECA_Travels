@@ -5,28 +5,29 @@
 
     <!-- Section: Social media -->
     <section class="mb-3 d-flex justify-content-evenly">
-        <!-- Facebook -->
-        <a
-        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"data-mdb-ripple-color="dark"> 
-        <i class="fa-brands fa-facebook" style="color: #187af1;"></i>
-        </a>
+        
+       <!-- Instagram -->
+       <a
+       data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.instagram.com/eca_travels/" role="button"data-mdb-ripple-color="dark" target="blank"> 
+       <i class="fa-brands fa-instagram" style="color: #187af1;"></i>
+   </a>
         <!-- Twitter -->
         <a
-        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"data-mdb-ripple-color="dark"> 
-        <i class="fa-brands fa-twitter" style="color: #187af1;"></i>
+        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://x.com/aulab_it" role="button"data-mdb-ripple-color="dark" target="blank"> 
+        <i class="fa-brands fa-x-twitter" style="color: #187af1;"></i>
     </a>
 
         <!-- Pinterest -->
         <a
-        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"data-mdb-ripple-color="dark"> 
+        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://it.pinterest.com/#top" role="button"data-mdb-ripple-color="dark" target="blank"> 
         <i class="fa-brands fa-pinterest" style="color: #187af1;"></i>
         </a>
 
-        <!-- Instagram -->
+        <!-- Facebook -->
         <a
-        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"data-mdb-ripple-color="dark"> 
-        <i class="fa-brands fa-instagram" style="color: #187af1;"></i>
-    </a>
+        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.facebook.com/aulab/?locale=it_IT" role="button"data-mdb-ripple-color="dark" target="blank"> 
+        <i class="fa-brands fa-facebook" style="color: #187af1;"></i>
+        </a>
 
     </section>
     <!-- Section: Social media -->

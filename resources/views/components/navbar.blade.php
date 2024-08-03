@@ -60,14 +60,15 @@
             @endguest
 
             @auth
-                <li class="nav-item">
-                    <a id="navLink" class="nav-link active  " aria-current="page"
+                <li class="nav-item ">
+                    <a id="navLink" class="nav-link active navColor1" aria-current="page"
                         href="{{ route('become.revisor') }}">Diventa un revisore</a>
                 </li>
+
                 <div class="dropstart">
                     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <li class="nav-item">
-                            <a class="nav-link active navColor" aria-current="page" href="#"><i
+                            <a class="nav-link active navColor1" aria-current="page" href="#"><i
                                     class="fa-solid fa-user">
                                     {{ Auth::user()->name }}</i>
                             </a>
