@@ -9,7 +9,7 @@ let nav = document.querySelector('.navbar')
 
 
 window.onscroll=()=>{
-    if(window.scrollY >= 0)
+    if(window.scrollY > 0)
     {
         links.forEach((link) => {
             
