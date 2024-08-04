@@ -44,7 +44,7 @@
 
 
 
-    <div class="navbar-nav ">
+    <div class="navbar-nav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
             <li class="nav-item">
                 <a id="navLink" class="nav-link active navColor1" aria-current="page"
@@ -60,7 +60,7 @@
             @endguest
 
             @auth
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a id="navLink" class="nav-link active navColor1" aria-current="page"
                         href="{{ route('become.revisor') }}">Diventa un revisore</a>
                 </li>
@@ -74,7 +74,7 @@
                             </a>
                         </li>
                     </button>
-                    <ul class="dropdown-menu me-3 dropCustom1">
+                    <ul class="dropdown-menu me-3 dropCustom1 dropstartCustom">
                         <li class="nav-item">
                             <a class="nav-link active dropCustomLink" aria-current="page" href="{{route('dashboard')}}">Profilo</a>
                         </li>

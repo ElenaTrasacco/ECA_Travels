@@ -54,17 +54,14 @@ color: var(--blutxt);
 }
 
 .dropCustom1{
-  background-color: rgba(24, 122, 241, 0.977);
+  background-color: rgba(202, 240, 248);
+  border: var(--blubg);
 }
 
 .dropCustomLink{
-  color: var(--blubg) !important;
+  color: var(--bluh) !important;
 }
 
-/* .navCustom.scroll{
-  background-color: #fb16ff4f;
-
-} */
 
 .navColor1{
     color: var(--bluh) !important ;
