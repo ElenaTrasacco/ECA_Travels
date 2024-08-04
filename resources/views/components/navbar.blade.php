@@ -52,10 +52,10 @@
             </li>
             <li class="nav-item">
                 @guest
-                    <a class="nav-link active navColor" aria-current="page" href="{{ route('register') }}">Registrati</a>
+                    <a class="nav-link active navColor1" aria-current="page" href="{{ route('register') }}">Registrati</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active navColor" aria-current="page" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link active navColor1" aria-current="page" href="{{ route('login') }}">Login</a>
                 </li>
             @endguest
 

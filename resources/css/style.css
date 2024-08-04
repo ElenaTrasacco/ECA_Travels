@@ -54,9 +54,9 @@ color: var(--blutxt);
 }
 
 .dropCustom1{
-  background-color: rgba(202, 240, 248);
+  background-color: rgb(202, 240, 248);
   border: var(--blubg);
-}
+} 
 
 .dropCustomLink{
   color: var(--bluh) !important;
@@ -669,5 +669,4 @@ svg path:hover{
 }
 
 /*---------------- fine dashboard --------------*/
-
 
