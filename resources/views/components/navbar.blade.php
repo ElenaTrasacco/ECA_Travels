@@ -39,7 +39,7 @@
                   @livewire('search-bar') 
                 </li>
             </ul>
-        </div>
+</div>
 
 
 
@@ -47,13 +47,18 @@
     <div class="navbar-nav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
             <li class="nav-item">
-                <a id="navLink" class="nav-link active navColor1" aria-current="page"
-                    href="">Contattaci</a>
+                <x-_locale lang="it"/>
             </li>
             <li class="nav-item">
-                @guest
-                    <a class="nav-link active navColor1" aria-current="page" href="{{ route('register') }}">Registrati</a>
-                </li>
+                <x-_locale lang="en"/>
+            </li>
+            <li class="nav-item">
+                <x-_locale lang="de"/>
+            </li>
+                <li class="nav-item">
+                    @guest
+                <a class="nav-link active navColor1" aria-current="page" href="{{ route('register') }}">Registrati</a>
+            </li>
                 <li class="nav-item">
                     <a class="nav-link active navColor1" aria-current="page" href="{{ route('login') }}">Login</a>
                 </li>

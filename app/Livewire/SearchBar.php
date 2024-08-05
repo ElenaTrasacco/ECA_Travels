@@ -13,9 +13,8 @@ class SearchBar extends Component
     {
         $results = [];
         if($this->search){
-            $results = Travel::where('title', 'like', '%' .$this->search. '%')->limit(5)->get();
-            $results = Travel::where('description', 'like', '%' .$this->search. '%')->limit(5)->get();
-            $results = Travel::where('category_id', 'like', '%' .$this->search. '%')->limit(5)->get();
+            $results = Travel::where('title','like', '%' .$this->search. '%')->orWhere('description', 'like', '%' .$this->search. '%')->orWhereIn('category_id', [1, 2, 3,  4, 5, 6, 7, 8, 9, 10])->limit(5)->get();
+            // ->orBelongsTo()->limit(5)->get();
         }
         return view('livewire.search-bar', [
             'travels' => $results

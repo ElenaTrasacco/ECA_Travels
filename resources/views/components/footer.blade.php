@@ -23,10 +23,17 @@
         <i class="fa-brands fa-pinterest" style="color: #187af1;"></i>
         </a>
 
-        <!-- Facebook -->
+        {{-- <!-- Facebook -->
         <a
         data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="https://www.facebook.com/aulab/?locale=it_IT" role="button"data-mdb-ripple-color="dark" target="blank"> 
         <i class="fa-brands fa-facebook" style="color: #187af1;"></i>
+        </a> --}}
+
+        {{--------------- contact us (collega mail) ---------------}}
+
+        <a
+        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="" role="button"data-mdb-ripple-color="dark" target="blank"> 
+        <i class="fa-regular fa-address-book" style="color: #187af1;"></i>
         </a>
 
     </section>
