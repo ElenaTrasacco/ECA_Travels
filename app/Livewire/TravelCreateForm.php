@@ -11,6 +11,7 @@ use Livewire\Features\SupportFileUploads\WithFileUploads;
 class TravelCreateForm extends Component
 
 {
+
  use WithFileUploads;
  #[Validate('required|min:3|max:150')]
  public $title;
@@ -21,6 +22,8 @@ class TravelCreateForm extends Component
  #[Validate('required|integer')]
  public $time;
  public $category;
+ public $images = [];
+ public $temporary_images;
 
 
 protected $rules = [
@@ -62,8 +65,17 @@ protected $messages = [
      ]);
      $this->reset();
      session()->flash('success','Viaggio inserito con successo');
+
  }
 
+ public function updatedTemporaryImages(){
+    if($this->validate([
+        'temporary_images.*'=>'image|max:1024',
+        'temporary_images'=>'max:6'
+    ])){foreach ($this->temporary_images as $image) {
+        $this->images[]=$image;
+    }}
+ }
 
     public function render()
     {

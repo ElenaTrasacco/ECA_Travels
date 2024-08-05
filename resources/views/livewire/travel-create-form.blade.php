@@ -42,6 +42,34 @@
             @enderror
             </div>
 
+            <div class="mb-3">
+                <label for="temporary_images" class="form-label">Inserisci Immagine</label>
+                <input type="file" class="form-control @error('temporary_images.*')is-invalid @enderror" id="time" aria-describedby="Giorni_di_viaggio" wire:model.live='temporary_images' multiple placeholder="inserisci un immagine"  >
+                @error('temporary_images')
+                <span class="text-danger">{{$message}}</span>
+                @enderror
+                </div>
+                @if (!empty($images))
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Foto Preview</p>
+                            <div class="row border border-4 border-success rounded shadow py-4">
+                                @foreach ($images as $key=>$image)
+                                    <div class="col-12">
+
+                                        <div  class="img-preview" style="background-image: url({{$image->temporaryUrl()}}); ">
+
+                                        </div>
+                                    </div>
+
+                                    
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+           
+                @endif
+
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
         <textarea name="description" class="form-control" wire:model.live='description'></textarea>

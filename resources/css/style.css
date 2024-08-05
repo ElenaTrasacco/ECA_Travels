@@ -670,3 +670,23 @@ svg path:hover{
 
 /*---------------- fine dashboard --------------*/
 
+/* Inizio Css Banner */
+.banner{
+  height: 150px;
+  background-color: rgba(6, 6, 90, 0.936);
+  opacity: .3;
+  border: solid gold 4px;
+  color: white;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+}
+/* Fine Css Banner */
+
+.img-preview{
+  height: 120px;
+  width: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
