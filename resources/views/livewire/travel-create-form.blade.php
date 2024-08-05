@@ -60,16 +60,24 @@
                                         <div  class="img-preview" style="background-image: url({{$image->temporaryUrl()}}); ">
 
                                         </div>
+                                        <button type="button" class="btn" wire:click="removeImage({{$key}})">Rimuovi immagine</button>
                                     </div>
-
-                                    
+    
                                 @endforeach
                             </div>
                         </div>
                     </div>
            
                 @endif
-
+                {{-- <p>Anteprima foto :</p>
+                    <div class="row">
+                        @foreach ($images as $key=>$image)
+                            <div class="col-12">
+                                <div  class="img-preview" style="background-image: url({{$image->temporaryUrl()}}); "></div>
+                                <button type="button" class="btn" wire:click ="removeImage({$key})">X</button>
+                            </div>
+                        @endforeach
+                    </div> --}}
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
         <textarea name="description" class="form-control" wire:model.live='description'></textarea>
