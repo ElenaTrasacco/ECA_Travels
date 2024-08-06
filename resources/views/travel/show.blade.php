@@ -19,7 +19,7 @@
               <div class="carousel-inner">
                 @foreach ($travel->images as $key=>$image)
                 <div class="carousel-item @if ($loop->first) active @endif">
-                  <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                <img src="{{ $image->getUrl(300,300) }}" class="img-fluid rounded shadow" alt="immagine{{ $key + 1 }} dell'annuncio {{ $travel->title }} ">
                 </div>
                   @endforeach
 

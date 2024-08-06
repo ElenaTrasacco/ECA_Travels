@@ -8,7 +8,7 @@
 
 
         <div class="col-md-3">
-            <img class="card-img-top imgLista" src="{{$travel->images->isNotEmpty() ? Storage::url($travel->images->first()->path) : 'https://picsum.photos/200'}}" alt="immagine">
+            <img class="card-img-top imgLista" src="{{$travel->images->isNotEmpty() ? $travel->images->first()->getUrl(300,300) : 'https://picsum.photos/200'}}" alt="immagine">
         </div>
 
 

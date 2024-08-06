@@ -25,7 +25,7 @@
 
         @foreach ($travel_to_check->images as $key=>$image)
             <div class="col-12 col-md-6 my-3">
-            <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow" alt="immagine{{ $key + 1 }} dell'annuncio {{ $travel_to_check->title }} ">
+            <img src="{{ $image->getUrl(300,300) }}" class="img-fluid rounded shadow" alt="immagine{{ $key + 1 }} dell'annuncio {{ $travel_to_check->title }} ">
             </div>
         @endforeach
                         
@@ -77,28 +77,3 @@
   @endif
 </div>
 </x-layout>
-
-
-{{-- @if ($travel_to_check)
-<div class="row pt-5">
-@if ($travel_to_check->images->count())
-@foreach ($travel_to_check->images as $key=>$image)
-@endforeach
-<div class="col-12 col-md-6">
-        </div>
-            <div class="row justify-content-center">
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="col-12 col-md-6 mb-4 text-center">
-                        <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
-                            alt="immagine{{ $key + 1 }} dell'annuncio {{ $travel_to_check->title }} ">
-                    </div>
-</div>
-                @endfor
-            @else
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="col-6 col-md-4 my-3">
-                        <img src="{{$travel_to_check->images->isNotEmpty() ? Storage::url($travel->images->first()->path) : 'https://picsum.photos/200'}}" alt="immagine segnaposto">
-                    </div>
-            @endfor
-    @endif
-</div> --}}

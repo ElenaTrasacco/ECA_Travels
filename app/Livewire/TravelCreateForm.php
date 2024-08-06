@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class TravelCreateForm extends Component
 
@@ -56,19 +58,21 @@ class TravelCreateForm extends Component
     public function store()
     {
         $this->validate();
-        $travel = Auth::user()->travels()->create([
-
+        $this->travel = Auth::user()->travels()->create([
             'title' => $this->title,
             'price' => $this->price,
             'description' => $this->description,
             'time' => $this->time,
-            'category_id' => $this->category
-
+            'category_id' => $this->category   
         ]);
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $travel->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName="travels/{$this->travel->id}";
+                $newImage=$this->travel->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 300, 300));
+                // $travel->images()->create(['path' => $image->store('images', 'public')]);
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         $this->reset();
         session()->flash('success', 'Viaggio inserito con successo');
@@ -89,8 +93,8 @@ class TravelCreateForm extends Component
      public function updatedTemporaryImages()
      {
          if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
-             'temporary_images' => 'max:6'
+            'temporary_images.*' => 'image|max:5000',
+            'temporary_images' => 'max:6'
          ])) {
              foreach ($this->temporary_images as $image) {
                  $this->images[] = $image;
