@@ -2,7 +2,10 @@
     <img class="card-img-top" src="{{$travel->images->isNotEmpty() ? Storage::url($travel->images->first()->path) : 'https://picsum.photos/200'}}" alt="immagine">
     <div class="card-body">
       <h5 class="card-title">Titolo: {{$travel->title}}</h5>
-      <p class="card-text">Prezzo: {{$travel->price}}</p>
+      <p class="card-text">Prezzo:
+        <i class="fa-solid fa-euro-sign"></i>
+        {{$travel->price}}
+      </p>
       <p class="card-text">Giorni consigliati: {{$travel->time}}</p>
     </div>
 

@@ -546,6 +546,7 @@ svg path:hover{
 .cardCustom{
   background-color: rgba(24, 122, 241, 0.131);
   color: var(--blutxt);
+  height: 500px;
 }
 
 /* -----------inizio btn card-------------- */
@@ -633,11 +634,6 @@ svg path:hover{
 
 
 
-
-
-
-
-
 /* --------------------BOH ------------------------*/
 .page-link{
   background-color:var(--blutxt);
@@ -670,18 +666,19 @@ svg path:hover{
 
 /*---------------- fine dashboard --------------*/
 
-/* Inizio Css Banner */
+/* ---------------Inizio Banner ------------------*/
 .banner{
   height: 150px;
-  background-color: rgba(6, 6, 90, 0.936);
-  opacity: .3;
-  border: solid gold 4px;
-  color: white;
+  background: linear-gradient(to top, rgba(22, 162, 255, 0.676), rgba(202, 240, 248, 0.855));
+  /* border: solid gold 4px; */
+  color: var(--blutxt);
+  font-family: "Bona Nova SC", serif;
+  font-size: x-large;
   z-index: 0;
   pointer-events: none;
   top: 0;
 }
-/* Fine Css Banner */
+/*--------------- Fine Banner ---------------------*/
 
 .img-preview{
   height: 120px;
@@ -689,4 +686,13 @@ svg path:hover{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.borderPreview{
+  border: solid 1px var(--bluh);
+  border-radius: 2%;
+}
+
+.carouselCustom{
+  height: 500px;
 }

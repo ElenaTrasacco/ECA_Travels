@@ -1,13 +1,13 @@
 <x-layout>
     <div class="container mt-5">
-        <div class="row justify-content-start">
+        <div class="row justify-content-start mt-5">
             <div class="col-12 col-md-4 mt-5 d-flex justify-content-center">
                 <h1>Effettuare il Login</h1>
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-5 authFont">
-        <div class="row justify-content-center">
+    <div class="container-fluid mt-5 authFont vh-100">
+        <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-4 d-flex justify-content-center">
                 <form action="{{route('login')}}" class="form_main" method="POST">
                     @csrf

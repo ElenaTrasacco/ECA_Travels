@@ -1,51 +1,61 @@
 <x-layout>
-    
-    <div class="container mt-5">
+
+    <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 mt-5">
                 <h2 class="titolo text-center">
-                    Pagina dettaglio
+                    Pagina dettaglio: {{$travel->title}}
                 </h2>
             </div>
         </div>
     </div>
-{{----------------- carousel -------------------}}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="http://picsum.photos/500" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="http://picsum.photos/501" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="http://picsum.photos/502" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
 
+<div class="container-fluid mt-5">
+  <div class="row bg-warning">
+  {{----------------------- carousel -------------------}}
+      <div class="col-12 col-md-8 d-flex mx-5 bg-danger justify-content-between">
+        @if ($travel->images->count() > 1)
+          <div id="carouselExampleAutoplaying" class="carousel slide carouselCustom" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner">
+                @foreach ($travel->images as $key=>$image)
+                <div class="carousel-item @if ($loop->first) active @endif">
+                  <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                </div>
+                  @endforeach
+
+                @if ($travel->images->count() > 1)
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              @endif
+
+            @else
+            <div class="col-12 col-md-10 justify-content-between">
+              <img src="https://picsum.photos/400" alt="">
+            </div>
+        @endif
+              </div>
+          </div>
+      
 {{------------------- fine carousel -------------------------}}
+            
+            <div class="col-12 col-md-8 mt-5 mx-5 bg-success">
+                {{-- <p>TITOLO: {{$travel->title}}</p> --}}
+                <p>PREZZO: {{$travel->price}} €</p>
+                <p>GIORNI CONSIGLIATI: {{$travel->time}}</p>
+                <p>CATEGORIA: {{$travel->category->name}}</p>
+                <p>DESCRIZIONE: {{$travel->description}}</p>
             </div>
-            <div class="col-12 col-md-6 mt-5">
-                <p>Titolo: {{$travel->title}}</p>
-                <p>Prezzo: {{$travel->price}}</p>
-                <p>Giorni consigliati: {{$travel->time}}</p>
-                <p>Category: {{$travel->category->name}}</p>
-                <p>Descrizione: {{$travel->description}}</p>
-            </div>
-        </div>
-    
-    </div>
+
+  </div>
+</div>
+</div>
 
 </x-layout>
+
+

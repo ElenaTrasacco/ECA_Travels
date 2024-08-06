@@ -8,8 +8,6 @@
     @error('title')
         <span class="text-danger">{{$message}}</span>
     @enderror
-        
-    
     </div>
 
     <div class="mb-3">
@@ -26,58 +24,58 @@
         @error('time')
         <span class="text-danger">{{$message}}</span>
         @enderror
-        </div>
+    </div>
 
-        <div class="mb-3">
-            <label for="category" class="form-label">Categorie:</label>
-            <select class="form-control" aria-label="Categorie" id="category" wire:model.live="category" >
-                <option selected>Seleziona una categoria</option>
-                @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
-                @endforeach
-              </select>
-           
+    <div class="mb-3">
+        <label for="category" class="form-label" aria-placeholder="Seleziona una categoria">Categorie</label>
+        <select class="form-control" aria-label="Categorie" id="category" wire:model.live="category" >
+        <option class="custom-select">Seleziona una categoria</option> 
+            @foreach($categories as $category)
+            <option value="{{$category->id}}">{{$category->name}}</option>
+            @endforeach
+        </select>
+
             @error('category')
             <span class="text-danger">{{$message}}</span>
             @enderror
-            </div>
+    </div>
 
-            <div class="mb-3">
-                <label for="temporary_images" class="form-label">Inserisci Immagine</label>
-                <input type="file" class="form-control @error('temporary_images.*')is-invalid @enderror" id="time" aria-describedby="Giorni_di_viaggio" wire:model.live='temporary_images' multiple placeholder="inserisci un immagine"  >
-                @error('temporary_images')
+    <div class="mb-3">
+        <label for="temporary_images" class="form-label">Inserisci Immagine</label> 
+        <input wire:model.live="temporary_images" multiple type="file" class="form-control @error('temporary_images.*')is-invalid @enderror" placeholder="Img/" >
+            @error('temporary_images.*')
                 <span class="text-danger">{{$message}}</span>
-                @enderror
+            @enderror 
+            @error('temporary_images')
+                <span class="text-danger">{{$message}}</span>
+            @enderror 
+    </div>
+            
+            @if (!empty($images))
+                <div class="row">
+                <div class="col-12">
+                <p>Anteprima Immagine</p>
+                <div class="row borderPreview">
+            @foreach ($images as $key => $image)
+                <div class="col-12 col-md-6 mt-3 mx-1">
+                <div class="img-preview" style="background-image: url({{$image->temporaryUrl()}});">
                 </div>
-                @if (!empty($images))
-                    <div class="row">
-                        <div class="col-12">
-                            <p>Foto Preview</p>
-                            <div class="row border border-4 border-success rounded shadow py-4">
-                                @foreach ($images as $key=>$image)
-                                    <div class="col-12">
-
-                                        <div  class="img-preview" style="background-image: url({{$image->temporaryUrl()}}); ">
-
-                                        </div>
-                                        <button type="button" class="btn" wire:click="removeImage({{$key}})">Rimuovi immagine</button>
-                                    </div>
-    
-                                @endforeach
-                            </div>
-                        </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-12 d-flex justify-content-end">
+                    <button type="button" class="btn d-flex justify-content-end" wire:click="removeImage({{$key}})">
+                    <i class="fa-solid fa-trash fa-beat fa-2x" style="color: #187af1;"></i>
+                    </button>
+                </div>
                     </div>
-           
-                @endif
-                {{-- <p>Anteprima foto :</p>
-                    <div class="row">
-                        @foreach ($images as $key=>$image)
-                            <div class="col-12">
-                                <div  class="img-preview" style="background-image: url({{$image->temporaryUrl()}}); "></div>
-                                <button type="button" class="btn" wire:click ="removeImage({$key})">X</button>
-                            </div>
-                        @endforeach
-                    </div> --}}
+    
+            @endforeach
+                </div>
+                </div>
+                </div>
+        
+            @endif
+            
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
         <textarea name="description" class="form-control" wire:model.live='description'></textarea>
@@ -87,7 +85,7 @@
     </div>
 
     <div class="d-flex justify-content-end">
-    <button class="cta">
+    <button type="submit" class="cta">
         <span>Inserisci</span>
         <svg width="15px" height="10px" viewBox="0 0 13 10">
         <path d="M1,5 L11,5"></path>

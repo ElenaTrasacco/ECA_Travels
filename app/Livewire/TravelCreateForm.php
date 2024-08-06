@@ -4,9 +4,9 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class TravelCreateForm extends Component
 
@@ -70,7 +70,7 @@ class TravelCreateForm extends Component
                 $travel->images()->create(['path' => $image->store('images', 'public')]);
             }
         }
-        // $this->reset();
+        $this->reset();
         session()->flash('success', 'Viaggio inserito con successo');
         $this->cleanForm();
     }
@@ -86,17 +86,17 @@ class TravelCreateForm extends Component
     }
 
 
-    public function updatedTemporaryImages()
-    {
-        if ($this->validate([
+     public function updatedTemporaryImages()
+     {
+         if ($this->validate([
             'temporary_images.*' => 'image|max:1024',
-            'temporary_images' => 'max:6'
-        ])) {
-            foreach ($this->temporary_images as $image) {
-                $this->images[] = $image;
-            }
-        }
-    }
+             'temporary_images' => 'max:6'
+         ])) {
+             foreach ($this->temporary_images as $image) {
+                 $this->images[] = $image;
+             }
+         }
+     }
 
     public function removeImage($key)
     {
