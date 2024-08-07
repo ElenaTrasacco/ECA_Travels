@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -79,6 +80,7 @@ class TravelCreateForm extends Component
                 $newFileName="travels/{$this->travel->id}";
                 $newImage=$this->travel->images()->create(['path'=>$image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path, 300, 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
                 // $travel->images()->create(['path' => $image->store('images', 'public')]);
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -86,6 +88,8 @@ class TravelCreateForm extends Component
         $this->reset();
         session()->flash('success', 'Viaggio inserito con successo');
         $this->cleanForm();
+
+
     }
 
     protected function cleanForm()
