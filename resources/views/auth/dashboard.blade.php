@@ -2,11 +2,10 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-12 col-md-5 mt-5">
-                <h2>{{Auth::user()->name}}'s dashboard</h2>
+                <h2>{{__('ui.dash')}} {{Auth::user()->name}}</h2>
             </div>
             <div class="col-12 col-md-8 mt-3">
-                <h3>Annunci preferiti</h3>
-                <p>Collega i preferiti della lista</p>
+                <h3>{{__('ui.fav')}}</h3>
             </div>
         </div>
     </div>

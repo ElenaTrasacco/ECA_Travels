@@ -3,7 +3,7 @@
     <div class="row px-3 rowLista">
 
         <div class="col-md-1 categoryList">
-            <h5 class="verticalTxt">{{$travel->category->name}}</h5>
+            <h5 class="verticalTxt">{{__('ui.categories')}}</h5>
         </div>
 
 
@@ -15,7 +15,7 @@
 
         <div class="col-md-3">
             <h5 class="card-title classe3">{{$travel->title}}</h5>
-            <p class="card-text classe3">Giorni consigliati: {{ $travel->time }}</p>
+            <p class="card-text classe3">{{__('ui.titList')}} {{ $travel->time }}</p>
         </div>
 
         <div class="col-md-3">
@@ -23,7 +23,7 @@
                 <i class="fa-solid fa-euro-sign"></i>
                 {{ $travel->price }}
             </p>
-            <a href="{{ route('travel.show', $travel) }}" class="btn buttonCard">Pagina dettaglio</a>
+            <a href="{{ route('travel.show', $travel) }}" class="btn buttonCard">{{__('ui.details')}}</a>
         </div>
 
            

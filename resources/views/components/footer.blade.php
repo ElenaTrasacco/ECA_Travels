@@ -40,7 +40,7 @@
     <!-- Section: Social media -->
  <!-- quote -->
 
- <p class="pb-3"> “I veri viaggiatori partono per partire e basta: cuori lievi, simili a palloncini che solo il caso muove eternamente, dicono sempre “Andiamo”, e non sanno perché. I loro desideri hanno le forme delle nuvole” - Charles Baudelaire</p>
+ <p class="pb-3"> {{__('ui.quote')}}</p>
     </div>
     <!-- Grid container -->
   

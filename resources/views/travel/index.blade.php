@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 mt-5">
                 <h2 class="titolo2 text-center">
-                    Viaggi inseriti
+                    {{__('ui.tripIns')}}
                 </h2>
             </div>
         </div>
@@ -18,7 +18,7 @@
                 </div>
             @empty
                 <div class="col-12 col-md-6">
-                    <h3>Non sono stati inseriti viaggi</h3>
+                    <h3>{{__('ui.notripCate')}}</h3>
                 </div>
             @endforelse
             

@@ -13,7 +13,7 @@
         @endif
             <div class="col-12">
                 <div class="d-flex justify-content-end">
-                        <a class="btn cta" href="{{route('travel.create')}}"> Inserisci Annuncio
+                        <a class="btn cta" href="{{route('travel.create')}}"> {{__('ui.insertArt')}}
                             <svg width="15px" height="10px" viewBox="0 0 13 10">
                                 <path class="prova" d="M1,5 L11,5"></path>
                                 <polyline points="8 1 12 5 8 9"></polyline>
@@ -104,7 +104,7 @@
 
 
     <div class="container mt-5">
-        <h3 class="my-5 text-center">Ultimi 3 annunci inseriti:</h3>
+        <h3 class="my-5 text-center">{{__('ui.lastThree')}}</h3>
         <div class="row justify-content-evenly">
 
             @forelse($travels as $travel)
@@ -113,7 +113,7 @@
                 </div>
             @empty
                 <div class="col-12 col-md-6">
-                    <h3>Non sono stati inseriti viaggi</h3>
+                    <h3>{{__('ui.noTrips')}}</h3>
                 </div>
             @endforelse
 

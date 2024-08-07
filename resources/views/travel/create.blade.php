@@ -5,7 +5,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <h2 class="titolo text-center">
-                    Inserisci un annuncio
+                    {{__('ui.insertArt')}}
                 </h2>
             </div>
         </div>

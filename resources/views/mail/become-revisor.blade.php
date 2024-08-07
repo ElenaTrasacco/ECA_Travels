@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-        <h1>Ricevuta richiesta di lavoro:</h1>
-        <h3>dati mittente:</h3>
-        <p>Nome:{{$user->name}}</p>
-        <p>Email:{{$user->email}}</p>
-        <p>Se vuoi diventare revisore  </p>
-        <a href="{{route('make.revisor',compact('user'))}}">clicca qui</a>
+        <h1>{{__('ui.requestReceived')}}: </h1>
+        <h3>{{__('ui.senderInfo')}}:</h3>
+        <p>{{__('ui.name')}}:{{$user->name}}</p>
+        <p>{{__('ui.mail')}}:{{$user->email}}</p>
+        <p>{{__('ui.ifbecomeR')}}  </p>
+        <a href="{{route('make.revisor',compact('user'))}}">{{__('ui.clickH')}}</a>
 
     </div>
 </body>

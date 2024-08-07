@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 mt-5">
                 <h1>
-                    Risultati per la ricerca: <span class="fst-italic">{{$query}}</span>
+                    {{__('ui.searchResult')}} <span class="fst-italic">{{$query}}</span>
                 </h1>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 </div>
             @empty
                 <div class="col-12 mt-5">
-                    <h3 class="text-center">Nessun articolo corrisponde alla tua ricerca</h3>
+                    <h3 class="text-center">{{__('ui.noArticles')}}</h3>
                     <div class="d-flex justify-content-center mt-5"> <i class="fa-solid fa-bahai fa-spin-pulse fa-4x" style="color: #187af1;"></i></div>
                 </div>
             @endforelse

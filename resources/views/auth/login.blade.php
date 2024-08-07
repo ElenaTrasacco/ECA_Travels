@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row justify-content-start mt-5">
             <div class="col-12 col-md-4 mt-5 d-flex justify-content-center">
-                <h1>Effettuare il Login</h1>
+                <h1>{{__('ui.loginTit')}}</h1>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                         </svg>
                         <input type="email" class="inputField" id="email" name="email" placeholder="Email">
                         @error('email')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger txError">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
 
@@ -36,7 +36,7 @@
                             </svg>
                         <input type="password" class="inputField" id="password" name="password" placeholder="Password">
                         @error('password')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger txError">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
 
@@ -44,7 +44,7 @@
 
 
                     <div class="col-12 col-md-3">
-                        <button id="button">Loggati</button>
+                        <button id="button">Login</button>
                     </div>
                     
                 </form>

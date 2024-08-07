@@ -696,3 +696,7 @@ svg path:hover{
 .carouselCustom{
   height: 500px;
 }
+
+.txError{
+  font-size: smaller;
+}

@@ -34,24 +34,31 @@ class TravelCreateForm extends Component
         'price' => 'required|numeric',
         'description' => 'required|min:5|max:2000',
         'time' => 'required|numeric',
-        'category' => 'required'
+        'category' => 'required',
+        // 'password' => 'required',
+        // 'email' => 'required',
+        // 'name' => 'required',
 
     ];
 
-    protected $messages = [
-        'title.required' => 'Il titolo è richiesto',
-        'description.required' => 'La descrizione è richiesta',
-        'price.required' => 'Il prezzo è richiesto',
-        'category.required' => 'La categoria è richiesta',
-        'time.required' => 'Il numero di giorni consigliati è richiesto',
-        'title.min' => 'Il titolo deve avere almeno 3 caratteri',
-        'title.max' => 'Il titolo deve avere al massimo 20 caratteri',
-        'description.min' => 'La descrizione deve avere almeno 5 caratteri',
-        'description.max' => 'La descrizione deve avere al massimo 2000 caratteri',
-        'price.numeric' => 'Il dato deve essere un numero',
-        'time.numeric' => 'Il dato deve essere un numero',
+    // protected $messages = [
+    //     'title.required' => 'Il titolo è richiesto',
+    //     'description.required' => 'La descrizione è richiesta',
+    //     'price.required' => 'Il prezzo è richiesto',
+    //     'category.required' => 'La categoria è richiesta',
+    //     'time.required' => 'Il numero di giorni consigliati è richiesto',
+    //     'password.required' => 'La password è richiesta',
+    //     'name.required' => 'Il nome è richiesto',
+    //     'email.required' => 'L`email è richiesta',
+    //     'title.min' => 'Il titolo deve avere almeno 3 caratteri',
+    //     'title.max' => 'Il titolo deve avere al massimo 20 caratteri',
+    //     'description.min' => 'La descrizione deve avere almeno 5 caratteri',
+    //     'description.max' => 'La descrizione deve avere al massimo 2000 caratteri',
+    //     'price.numeric' => 'Il dato deve essere un numero',
+    //     'time.numeric' => 'Il dato deve essere un numero',
+    
 
-    ];
+    // ];
 
 
 
@@ -63,7 +70,9 @@ class TravelCreateForm extends Component
             'price' => $this->price,
             'description' => $this->description,
             'time' => $this->time,
-            'category_id' => $this->category   
+            'category_id' => $this->category,
+            // 'user_id' => Auth::id()  
+            // //l'ho aggiunto io 
         ]);
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {

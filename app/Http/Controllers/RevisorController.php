@@ -23,17 +23,21 @@ class RevisorController extends Controller
     {
         $travel->setAccepted(true);
         return redirect()->back()->with('message',"Hai accettato l'articolo $travel->title");
+        // return redirect()->back()->with('messageA');
     }
 
     public function reject(Travel $travel)
     {
         $travel->setAccepted(false);
         return redirect()->back()->with('message',"Hai rifiutato l'articolo $travel->title");
+        // return redirect()->back()->with('messageD');
     }
     public function becomeRevisor()
     {
         Mail::to('eca@travel.com')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('homepage')->with('sent','richiesta inviata con successo');
+        // return redirect()->route('homepage')->with('sentR');
+
     }
 
     public function makeRevisor(User $user)

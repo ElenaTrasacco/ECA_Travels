@@ -32,4 +32,9 @@ class PublicController extends Controller implements HasMiddleware
     public function dashboard(){
         return view('auth.dashboard');
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

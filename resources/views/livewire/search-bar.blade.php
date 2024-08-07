@@ -3,7 +3,7 @@
 
     <form class="d-flex mx-5" role="search" action="{{route ('travel.searched')}}" method="GET">
         <input wire:model.live.debounce.500ms="search" class="form-control me-2 searchCustom" type="search" aria-label="Search" name="query">
-        <button class="btn btnSearch" type="submit">Cerca</button> 
+        <button class="btn btnSearch" type="submit">{{__('ui.search')}}</button> 
     </form>
     
     @if (sizeof($travels) > 0)
