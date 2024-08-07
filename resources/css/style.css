@@ -200,7 +200,7 @@ svg path:hover{
 
 
 .headCustomC{
-  width: 150%;
+  width: 100%;
 }
 
 /*---------------- fine btn preferiti --------------*/
@@ -714,3 +714,7 @@ svg path:hover{
 /* .filename{
   color: blue;
 } */
+
+.bgVal{
+  background-color: var(--blubg);
+}
