@@ -21,7 +21,7 @@
                         </svg>
                         <input type="text" class="inputFieldR" id="name" name="name" placeholder="Nome">
                         @error('name')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
 {{------------------------- mail ---------------------------}}
@@ -34,7 +34,7 @@
                         </svg>
                         <input type="email" class="inputFieldR" id="email" name="email" placeholder="Email">
                         @error('email')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
                     
@@ -46,7 +46,7 @@
                             </svg>
                         <input type="password" class="inputFieldR" id="password" name="password" placeholder="Password">
                         @error('password')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
 {{------------------------- pw_conf ---------------------------}}
@@ -59,7 +59,7 @@
                         <input type="password" class="inputFieldR" id="password_confirmation"
                             name="password_confirmation" placeholder="Conferma Password">
                         @error('password_confirmation')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{__('ui.failed')}}</span>
                         @enderror
                     </div>
 

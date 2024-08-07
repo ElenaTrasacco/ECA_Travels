@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container-fluid mt-5 pt-5 ">
+<div class="container-fluid mt-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 mb-5 mt-3">
             <div class="rounded shadow p-3">
@@ -29,25 +29,25 @@
         @endif
 
         @if ($travel_to_check)
-            <div class="row pt-5 justify-content-center shadow w-50 mx-5">
+            <div class="row pt-5 justify-content-center shadow mx-5">
         @if ($travel_to_check->images->count())
 
         @foreach ($travel_to_check->images as $key=>$image)
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-12 col-md-8 my-3 d-flex justify-content-center">
             <img src="{{ $image->getUrl(300,300) }}" class="img-fluid rounded shadow" alt="immagine{{ $key + 1 }} dell'annuncio {{ $travel_to_check->title }} ">
             </div>
         @endforeach
                         
         @else
         @for ($i = 0; $i < 6; $i++)
-            <div class="col-12 col-md-6 my-3 d-flex justify-content-center">
+            <div class="col-12 col-md-8 my-3 d-flex justify-content-center">
             <img src="{{$travel_to_check->images->isNotEmpty() ? Storage::url($travel->images->first()->path) : 'https://picsum.photos/200'}}" alt="immagine segnaposto">
             </div>
         @endfor
         @endif
-            </div>
+        
 
-<div class="row justify-content-end">
+{{-- <div class="row justify-content-end"> --}}
             <div class="col-12 col-md-4 d-flex mt-5">
                 <div>
                     <h2>{{ $travel_to_check->title }}</h2>
@@ -73,6 +73,7 @@
                 </div>
                 </div>
             </div>
+{{-- </div> --}}
 </div>
 @else
     <div class="row justify-content-center align-items-center text-center my-5">
@@ -85,4 +86,5 @@
     </div>
   @endif
 </div>
+
 </x-layout>
