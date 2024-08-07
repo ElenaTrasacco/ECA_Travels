@@ -9,6 +9,7 @@ Route::get('/', [PublicController::class, 'home'])->name('homepage');
 Route::get('/search/travel', [PublicController::class, 'searchTravel'])->name('travel.searched');
 Route::get('/dashboard', [PublicController::class, 'dashboard'])->name('dashboard');
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+Route::get('/contactus', [PublicController::class, 'contactus'])->name('contactus');
 
 
 Route::get('/travel/create',[TravelController::class,'create'])->name('travel.create');

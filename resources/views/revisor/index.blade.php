@@ -40,7 +40,7 @@
                         
         @else
         @for ($i = 0; $i < 6; $i++)
-            <div class="col-12 col-md-8 my-3 d-flex justify-content-center">
+            <div class="col-12 col-md-4 my-3">
             <img src="{{$travel_to_check->images->isNotEmpty() ? Storage::url($travel->images->first()->path) : 'https://picsum.photos/200'}}" alt="immagine segnaposto">
             </div>
         @endfor

@@ -100,5 +100,6 @@ return[
     'accRev' => 'Accepted article: ',
     'denRev' => 'Denied article: ',
     'reqRev' => 'Request successfully sent',
+    'contactTit' => 'Contact us',
 
 ];

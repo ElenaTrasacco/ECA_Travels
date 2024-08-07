@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
         <div class="row justify-content-evenly">
             @forelse($travels as $travel)
                 <div class="col-12 col-md-3">

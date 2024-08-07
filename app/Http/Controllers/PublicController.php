@@ -33,6 +33,10 @@ class PublicController extends Controller implements HasMiddleware
         return view('auth.dashboard');
     }
 
+    public function contactus(){
+        return view('travel.contactus');
+    }
+
     public function setLanguage($lang){
         session()->put('locale', $lang);
         return redirect()->back();

@@ -77,7 +77,7 @@ class TravelController extends Controller implements HasMiddleware
     public function byCategory(Category $category)
     {
 
-        $travels = $category->travels()->where('is_accepted', true);
+        $travels = $category->travels()->where('is_accepted', true)->get();
         return view('travel.category', compact('travels', 'category'));
 
         // return view('travel.category',['travels'=>$category->travels,'category'=>$category]);

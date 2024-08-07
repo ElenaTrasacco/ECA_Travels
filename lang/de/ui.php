@@ -98,6 +98,6 @@ return[
 'accRev' => 'Artikel angenommen: ',
 'denRev' => 'Artikel abgelehnt: ',
 'reqRev' => 'Anfrage erfolgreich gesendet',
-
+'contactTit' => 'Kontaktieren Sie uns',
 
 ];

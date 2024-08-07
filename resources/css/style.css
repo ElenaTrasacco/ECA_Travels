@@ -561,6 +561,7 @@ svg path:hover{
   font-family: inherit;
   font-size: 17px;
   padding: 0.6em 1.5em;
+  
  }
 
  .buttonCard:hover {
@@ -701,11 +702,15 @@ svg path:hover{
   font-size: smaller;
 }
 
-.ciaoa{
+/* .ciaoa{
   margin-top: 800px;
  
 }
 
 .ciaob{
   height: 300px;
-}
+} */
+
+/* .filename{
+  color: blue;
+} */

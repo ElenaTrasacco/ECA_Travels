@@ -32,7 +32,7 @@
         {{--------------- contact us (collega mail) ---------------}}
 
         <a
-        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="" role="button"data-mdb-ripple-color="dark" target="blank"> 
+        data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="{{route('contactus')}}" role="button"data-mdb-ripple-color="dark"> 
         <i class="fa-regular fa-address-book" style="color: #187af1;"></i>
         </a>
 

@@ -101,6 +101,7 @@ return[
     'accRev' => 'Hai accettato l`articolo ',
     'denRev' => 'Hai rifiutato l`articolo',
     'reqRev' => 'Richiesta inviata con successo',
+    'contactTit' => 'Contattaci',
    
 ];
 

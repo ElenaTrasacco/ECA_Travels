@@ -30,7 +30,7 @@
     <div class="mb-3">
         <label for="category" class="form-label" aria-placeholder="Seleziona una categoria">{{__('ui.categories')}}</label>
         <select class="form-control" aria-label="Categorie" id="category" wire:model.live="category" >
-        <option class="custom-select">{{__('ui.cateOpt')}}</option> 
+        <option class="custom-select" selected value="">{{__('ui.cateOpt')}}</option> 
             @foreach($categories as $category)
             <option value="{{$category->id}}">{{__("ui.$category->name")}}</option>
             @endforeach
@@ -43,7 +43,7 @@
 
     <div class="mb-3">
         <label for="temporary_images" class="form-label"> {{__('ui.insertImmy')}}</label> 
-        <input wire:model.live="temporary_images" multiple type="file" class="form-control @error('temporary_images.*')is-invalid @enderror" placeholder="Img/">
+        <input wire:model.live="temporary_images" multiple type="file" class="form-control filename @error('temporary_images.*')is-invalid @enderror" placeholder="Img/">
             @error('temporary_images.*')
                 <span class="text-danger">{{__('ui.reqImg')}}</span>
             @enderror 
@@ -51,6 +51,8 @@
                 <span class="text-danger">{{__('ui.reqImg')}}</span>
             @enderror 
     </div>
+
+
             
             @if (!empty($images))
                 <div class="row">
@@ -86,7 +88,7 @@
     </div>
 
     <div class="d-flex justify-content-end">
-    <button type="submit" class="cta">
+    <button type="submit" class="cta" >
         <span>{{__('ui.insert')}}</span>
         <svg width="15px" height="10px" viewBox="0 0 13 10">
         <path d="M1,5 L11,5"></path>
