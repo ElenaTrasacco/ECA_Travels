@@ -10,12 +10,14 @@
 <body>
     <x-navbar/>
     {{-- sistemare classe altezza per footer revisore --}}
-    <div class="hminRevisor">
+    <div>
         {{$slot}}
     </div>
     
-    <div class="mt-5">
+    <div class="mt-5 bg-success">
         <x-footer/>
     </div>
+
+    
 </body>
 </html>

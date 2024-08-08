@@ -16,6 +16,11 @@ body{
     color: rgb(1, 94, 156);
 }
 
+.hminRevisor{
+  max-height: 100vh;
+  /* min-height: 50vh; */
+  padding-bottom: 0px;
+}
 
 /* --------------------NAVBAR ------------------------*/
 .btnSearch{
@@ -92,7 +97,13 @@ color: var(--blutxt);
 }
 
 .bgList{
-  background-image: url(/storage/media/headL.jpeg);
+  background-image: url('/resources/media/headL2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  margin-top: 4%;
 }
 
 .colosseo{
@@ -721,4 +732,15 @@ svg path:hover{
 
 .hminRevisor{
   min-height: 100px;
+}
+
+.bgCreate{
+  background-image: url('/resources/media/headC2.jpeg');
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  margin-top: 4%;
 }
