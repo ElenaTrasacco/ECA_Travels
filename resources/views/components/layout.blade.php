@@ -9,6 +9,7 @@
 </head>
 <body>
     <x-navbar/>
+    {{-- sistemare classe altezza per footer revisore --}}
     <div class="hminRevisor">
         {{$slot}}
     </div>
