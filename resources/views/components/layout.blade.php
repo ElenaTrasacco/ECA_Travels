@@ -9,7 +9,7 @@
 </head>
 <body>
     <x-navbar/>
-    <div>
+    <div class="hminRevisor">
         {{$slot}}
     </div>
     

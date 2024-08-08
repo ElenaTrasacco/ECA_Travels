@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
@@ -80,9 +81,16 @@ class TravelCreateForm extends Component
             foreach ($this->images as $image) {
                 $newFileName="travels/{$this->travel->id}";
                 $newImage=$this->travel->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 300, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                // dispatch(new ResizeImage($newImage->path, 300, 300));
+                // dispatch(new GoogleVisionSafeSearch($newImage->id));
+                // dispatch(new GoogleVisionLabelImage($newImage->id));
+            RemoveFaces::withChain([
+                    new ResizeImage($newImage->path,300,300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+
+                
 
                 // $travel->images()->create(['path' => $image->store('images', 'public')]);
             }

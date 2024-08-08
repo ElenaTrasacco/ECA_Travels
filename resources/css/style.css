@@ -718,3 +718,7 @@ svg path:hover{
 .bgVal{
   background-color: var(--blubg);
 }
+
+.hminRevisor{
+  min-height: 100px;
+}
