@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Region;
 use App\Models\Category;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -27,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
 
         if(Schema::hasTable('categories')){
             View::share('categories', Category::orderBy('name')->get());
+        }
+
+        if(Schema::hasTable('regions')){
+            View::share('regions', Region::orderBy('name')->get());
         }
     }
 }

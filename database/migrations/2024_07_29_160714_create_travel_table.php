@@ -23,6 +23,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->unsignedBigInteger('region_id')->nullable();
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@
         </div>
     </div>
 
-<div class="container-fluid mt-5 d-flex justify-content-end mx-4">
+<div class="container mt-5 d-flex justify-content-end mx-4">
   <div class="row justify-content-end">
   {{----------------------- carousel -------------------}}
       <div class="col-12 col-md-8 mx-5">
@@ -45,11 +45,12 @@
       
 {{------------------- fine carousel -------------------------}}
             
-            <div class="col-12 col-md-8 mx-5">
+            <div class="col-12 col-md-8 mx-5 vh-100">
                 {{-- <p>TITOLO: {{$travel->title}}</p> --}}
                 <h5 class="my-4">{{__('ui.price')}} {{$travel->price}} €</h5>
                 <h5 class="my-4">{{__('ui.days')}} {{$travel->time}}</h5>
                 <h5 class="my-4">{{__('ui.categories')}}: {{__("ui.{$travel->category->name}")}}</h5>
+                <h5 class="my-4">Region: {{$travel->region->name}}</h5>
                 <h5 class="my-4">{{__('ui.descr')}}: {{$travel->description}}</h5>
             </div>
 

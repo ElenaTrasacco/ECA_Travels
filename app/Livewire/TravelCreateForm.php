@@ -27,6 +27,7 @@ class TravelCreateForm extends Component
     #[Validate('required|integer')]
     public $time;
     public $category;
+    public $region;
     public $images = [];
     public $temporary_images;
     public $travel;
@@ -74,6 +75,8 @@ class TravelCreateForm extends Component
             'description' => $this->description,
             'time' => $this->time,
             'category_id' => $this->category,
+            'region_id' => $this->region,
+
             // 'user_id' => Auth::id()  
             // //l'ho aggiunto io 
         ]);
@@ -111,6 +114,7 @@ class TravelCreateForm extends Component
         $this->price = '';
         $this->time = '';
         $this->images = [];
+        $this->region = '';
     }
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
 use App\Models\Travel;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -84,7 +85,13 @@ class TravelController extends Controller implements HasMiddleware
 
     }
 
-    public function region(Travel $travel){
-        return view('travel.region', compact('travel'));
+    public function region(Region $region)
+    {
+
+        $travels = $region->travels()->where('is_accepted', true)->get();
+        return view('travel.region', compact('travels', 'region'));
+
+        // return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
+
     }
 }

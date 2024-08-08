@@ -28,6 +28,16 @@
     </div>
 
     <div class="mb-3">
+        <label for="region" class="form-label" aria-placeholder="Seleziona una regione">Regione</label>
+        <select class="form-control" aria-label="Regione" id="region" wire:model.live="region" >
+        <option class="custom-select" selected value="">{{__('ui.cateOpt')}}</option> 
+            @foreach($regions as $region)
+            <option value="{{$region->id}}">{{$region->name}}</option>
+            @endforeach
+        </select>
+    </div>
+
+    <div class="mb-3">
         <label for="category" class="form-label" aria-placeholder="Seleziona una categoria">{{__('ui.categories')}}</label>
         <select class="form-control" aria-label="Categorie" id="category" wire:model.live="category" >
         <option class="custom-select" selected value="">{{__('ui.cateOpt')}}</option> 

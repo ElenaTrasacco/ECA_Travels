@@ -117,7 +117,8 @@
                         <h2>{{ $travel_to_check->title }}</h2>
                         <h4>{{__('ui.author')}} {{ $travel_to_check->user->name }} </h4>
                         <h4> {{__('ui.price')}} {{ $travel_to_check->price }}</h4>
-                        <h4 class="fst-italic">{{__('ui.categories')}}: {{ $travel_to_check->category->name }}</h4>
+                        <h4>Regione: {{ $travel_to_check->region->name }}</h4>
+                        <h4 class="fst-italic">{{__('ui.categories')}}: {{ $travel_to_check->category->name}}</h4>
                         <p class="h6">{{__('ui.descr')}}: {{ $travel_to_check->description }}</p>
                         <div class="d-flex justify-content-between my-3">
                             <form action="{{ route('reject', ['travel' => $travel_to_check]) }}" method="POST">

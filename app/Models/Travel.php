@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Image;
+use App\Models\Region;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -20,19 +21,25 @@ class Travel extends Model
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
+            // 'region' => $this->region,
             // 'category' => $this->category, 
         ];   
     }
 
     use HasFactory;
-    protected $fillable = ['title','price','description','time','user_id', 'category_id'];
+    protected $fillable = ['title','price','description','time','user_id', 'category_id', 'region_id'];
 
     public function user(){
         return $this->belongsTo(User::class);
+
     }
 
     public function category(){
         return $this->belongsTo(Category::class);
+    }
+
+    public function region(){
+        return $this->belongsTo(Region::class);
     }
 
     public function setAccepted($value){
@@ -47,4 +54,6 @@ class Travel extends Model
     public function images():HasMany{
         return $this->hasMany(Image::class);
     }
+
+
 }
