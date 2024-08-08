@@ -16,6 +16,7 @@ Route::get('/travel/create',[TravelController::class,'create'])->name('travel.cr
 Route::get('/travel/index',[TravelController::class,'index'])->name('travel.index');
 Route::get('/travel/show/{travel}',[TravelController::class,'show'])->name('travel.show');
 Route::get('/travel/category/{category}',[TravelController::class,'byCategory'])->name('travel.category');
+Route::get('/travel/region/{region}', [TravelController::class, 'region'])->name('travel.region');
 
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');

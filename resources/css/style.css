@@ -75,6 +75,63 @@ color: var(--blutxt);
   color: var(--blubg) !important;
 }
 
+
+@media screen and (max-width: 767px) {
+
+.navbar-toggler{
+position: relative;
+
+}
+.nameR{
+  color: var(--blubg);
+}
+
+.titResp{
+  margin-top: 10%;
+}
+.navbar-collapse{
+  background-color: var(--bluh);
+  
+}
+#navLink {
+  color: var(--blubg) !important;
+  margin-left: 5px;
+}
+
+footer{
+  margin-top: 190vh;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .navbar-toggler{
+    position: relative;
+    
+    }
+    .nameR{
+      color: var(--blubg);
+    }
+    
+    .titResp{
+      margin-top: 10%;
+    }
+    .navbar-collapse{
+      background-color: var(--bluh);
+      
+    }
+    #navLink {
+      color: var(--blubg) !important;
+      margin-left: 5px;
+    }
+
+    .cardR{
+    
+     display: flex;
+     flex-wrap: wrap;
+     
+    }
+}
 /* --------------------FOOTER ------------------------*/
 
 .footerCustom{

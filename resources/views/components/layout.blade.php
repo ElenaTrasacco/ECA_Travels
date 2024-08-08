@@ -14,7 +14,7 @@
         {{$slot}}
     </div>
     
-    <div class="mt-5 bg-success">
+    <div class="mt-5">
         <x-footer/>
     </div>
 

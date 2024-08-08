@@ -83,4 +83,8 @@ class TravelController extends Controller implements HasMiddleware
         // return view('travel.category',['travels'=>$category->travels,'category'=>$category]);
 
     }
+
+    public function region(Travel $travel){
+        return view('travel.region', compact('travel'));
+    }
 }

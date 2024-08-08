@@ -43,19 +43,19 @@
 
 
 
-
-    <div class="navbar-nav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-            {{-- <li class="nav-item"> --}}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav fs-5">
+        <li class="nav-item">
                 <x-_locale lang="it"/>
-            {{-- </li> --}}
-            {{-- <li class="nav-item"> --}}
+        </li>
+        <li class="nav-item">
                 <x-_locale lang="en"/>
-            {{-- </li> --}}
-            {{-- <li class="nav-item"> --}}
+        </li>
+        <li class="nav-item">
                 <x-_locale lang="de"/>
-            {{-- </li> --}}
-                {{-- <li class="nav-item"> --}}
+        </li>
+        <li>
+
                     @guest
                 <a class="nav-link active navColor1" aria-current="page" href="{{ route('register') }}">{{__('ui.registerBtn')}}</a>
             </li>
@@ -74,7 +74,7 @@
                     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <li class="nav-item">
                             <a class="nav-link active navColor1" aria-current="page" href="#"><i
-                                    class="fa-solid fa-user">
+                                    class="fa-solid fa-user nameR">
                                     {{ Auth::user()->name }}</i>
                             </a>
                         </li>
