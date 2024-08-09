@@ -15,7 +15,7 @@
 
         <div class="col-md-3">
             <h5 class="card-title classe3">{{$travel->title}}</h5>
-            <p class="card-text classe3">{{__('ui.titList')}} {{ $travel->time }}</p>
+            <p class="card-text classe3">{{__('ui.days')}}: {{ $travel->time }}</p>
         </div>
 
         <div class="col-md-3">

@@ -7,6 +7,7 @@
             <div class="col-12 col-md-8 mt-3">
                 {{-- <h3>{{__('ui.fav')}}</h3> --}}
             <p class="fs-3">{{__('ui.dashPpl')}}</p>
+            <p class="fs-3">{{__('ui.dashPpl2')}}</p>
             </div>
 
             <div class="col-12">
