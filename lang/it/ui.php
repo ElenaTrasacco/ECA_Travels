@@ -102,6 +102,13 @@ return[
     'denRev' => 'Hai rifiutato l`articolo',
     'reqRev' => 'Richiesta inviata con successo',
     'contactTit' => 'Contattaci',
+    'send' => 'Invia',
+    'dashPpl' => 'PAGINA DELL`UTENTE AUTENTICATO. Puoi inserire annunci e navigare fra decine di esperienze inserite dagli altri utenti. Se vuoi diventare revisore e aiutarci nella selezione degli articoli migliori, clicca in basso. Speriamo che il nostro sito sia di aiuto a te e a molti viaggiatori che vogliono vivere esperienze uniche. Buon viaggio!',
+    // 'messageA' => 'Articolo accettato',
+    // 'messageR' => 'Artikel rifiutato',
+    'noTrips' => 'Non ci sono viaggi',
+    'region' => 'Regione',
+    'regOpt' => 'Seleziona una regione',
    
 ];
 

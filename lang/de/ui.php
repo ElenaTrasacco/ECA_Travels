@@ -99,5 +99,13 @@ return[
 'denRev' => 'Artikel abgelehnt: ',
 'reqRev' => 'Anfrage erfolgreich gesendet',
 'contactTit' => 'Kontaktieren Sie uns',
+'send' => 'Senden',
+'dashPpl' => 'DASHBOARD DES EINGELOGGTEN BENUTZERS. Sie können Reisen eingeben und in viele Erfahrungen eintauchen, die von anderen Benutzern eingegeben wurden. Wenn Sie ein Rezensent werden wollen und uns bei der Auswahl der besten Reisen helfen wollen, klicken Sie auf den Button unten. Wir hoffen, dass Ihnen unsere Seite genauso gut gefällt wie uns, und dass sie Ihnen und den anderen Nutzern hilft, eine schöne Reise zu organisieren. Viel Spaß auf unserer Seite!',
+
+// 'messageA' => 'Artikel akzeptiert',
+// 'messageR' => 'Artikel wiederlegt',
+'noTrips' => 'Es gibt keine Reisen',
+'region' => 'Region',
+'regOpt' => 'Wählen Sie eine Region',
 
 ];

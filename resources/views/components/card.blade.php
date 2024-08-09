@@ -10,7 +10,7 @@
     </div>
 
     <div class="d-flex justify-content-between">
-      <a href="{{route('travel.show',$travel)}}" class="btn buttonCard mb-3 mx-2">{{__('ui.details')}}
+      <a href="{{route('travel.show',$travel)}}" class="btn buttonCard mb-3 mx-3">{{__('ui.details')}}
       </a>
     </div>
     

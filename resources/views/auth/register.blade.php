@@ -1,13 +1,13 @@
 <x-layout>
-    <div class="container mt-5 ">
+    <div class="container mt-5">
         <div class="row justify-content-start">
             <div class="col-12 col-md-6 mt-5">
                 <h1>{{__('ui.registerTit')}}</h1>
             </div>
         </div>
     </div>
-    <div class="container mt-5 authFont">
-        <div class="row justify-content-center">
+    <div class="container mt-5 authFont vh-100">
+        <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-5 d-flex justify-content-center">
                 <form action="{{ route('register') }}" class="form_mainR" method="POST">
                     @csrf

@@ -7,7 +7,7 @@
         </div> --}}
     </div>
     <div class="container p-0 ">
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-6 mt-5">
                 <h2 class="titolo2 text-center">
                     {{__('ui.tripIns')}}

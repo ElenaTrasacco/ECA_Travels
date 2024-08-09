@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid mt-5 pt-5 vh-100">
+    <div class="container-fluid mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 mb-5 mt-3">
                 <div class="rounded shadow p-3">

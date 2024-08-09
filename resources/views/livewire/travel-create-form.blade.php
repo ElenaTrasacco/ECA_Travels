@@ -28,9 +28,9 @@
     </div>
 
     <div class="mb-3">
-        <label for="region" class="form-label" aria-placeholder="Seleziona una regione">Regione</label>
+        <label for="region" class="form-label" aria-placeholder="Seleziona una regione">{{__('ui.region')}}</label>
         <select class="form-control" aria-label="Regione" id="region" wire:model.live="region" >
-        <option class="custom-select" selected value="">{{__('ui.cateOpt')}}</option> 
+        <option class="custom-select" selected value="">{{__('ui.regOpt')}}</option> 
             @foreach($regions as $region)
             <option value="{{$region->id}}">{{$region->name}}</option>
             @endforeach

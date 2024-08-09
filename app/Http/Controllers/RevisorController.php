@@ -22,7 +22,7 @@ class RevisorController extends Controller
     public function accept(Travel $travel)
     {
         $travel->setAccepted(true);
-        return redirect()->back()->with('message',"Hai accettato l'articolo $travel->title");
+        return redirect()->back()->with('message', "Hai accettato l'articolo $travel->title");
         // return redirect()->back()->with('messageA');
     }
 
@@ -35,7 +35,7 @@ class RevisorController extends Controller
     public function becomeRevisor()
     {
         Mail::to('eca@travel.com')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('homepage')->with('sent','richiesta inviata con successo');
+        return redirect()->route('homepage')->with('sent','Richiesta inviata con successo');
         // return redirect()->route('homepage')->with('sentR');
 
     }

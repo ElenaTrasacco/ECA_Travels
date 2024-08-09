@@ -101,5 +101,13 @@ return[
     'denRev' => 'Denied article: ',
     'reqRev' => 'Request successfully sent',
     'contactTit' => 'Contact us',
+    'send' => 'Send',
+    'dashPpl' => 'DASHBOARD OF THE LOGGED-IN USER. You can insert trips and dive into many experiences, inserted by other users. If you want to become a revisor and help us selectiong the best trips, click on the button below. We hope you like our site as much as we do, and that it helps you and the other users to organize a wonderful trip. Enjoy!', 
+
+    // 'messageA' => 'Article accepted',
+    // 'messageR' => 'Article denied',
+    'noTrips' => 'There are no trips',
+    'region' => 'Region',
+    'regOpt' => 'Select a region',
 
 ];
