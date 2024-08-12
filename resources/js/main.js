@@ -62,17 +62,9 @@ window.onscroll=()=>{
 
 
 
+// function fav() {
+//     document.getElementById("favourites").innerHTML = "cia";
+// }
 
 
 
-
-// path.forEach(e=>e.addEventListener('mouseover',()=>{
-
-    
-//     wrapper.classList.add('banner');
-//     // par.innerHTML='Sei in : '+e.getAttribute('name');
-//     par.innerHTML= e.getAttribute('name');
-//     par.style.visibility = 'visible';
-//     console.log('sei nell over');
-    
-// }))
