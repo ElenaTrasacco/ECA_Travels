@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5 vh-100">
         <div class="row">
             <div class="col-12 col-md-5 mt-5">
                 <h2 class="display-6">{{__('ui.dash')}} {{Auth::user()->name}}</h2>
@@ -23,10 +23,10 @@
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Region</th>
-                                <th scope="col">Details</th>
+                                <th scope="col">{{ __('ui.tit') }}</th>
+                                <th scope="col">{{__('ui.categories')}}</th>
+                                <th scope="col">{{__('ui.region')}}</th>
+                                <th scope="col">{{__('ui.price')}}</th>
 
                             </tr>
                             </thead>
