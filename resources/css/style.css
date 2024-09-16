@@ -728,7 +728,7 @@ svg path:hover{
 
 /*---------------- inizio dashboard --------------*/
 .bgDash{ 
-  height: 500px; 
+  height: 100px; 
   display: flex;
   justify-content: space-between;
 }

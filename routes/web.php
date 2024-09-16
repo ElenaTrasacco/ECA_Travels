@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\FavouriteController;
 
 Route::get('/', [PublicController::class, 'home'])->name('homepage');
 Route::get('/search/travel', [PublicController::class, 'searchTravel'])->name('travel.searched');
@@ -28,4 +29,4 @@ Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->mid
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
 
-
+Route::get('/favourite/index',[FavouriteController::class,'index'])->name('favourite.index');

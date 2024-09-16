@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Region;
 use App\Models\Travel;
 use App\Models\Category;
+use App\Models\Favourite;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Routing\Controllers\Middleware;
@@ -22,6 +23,7 @@ class TravelController extends Controller implements HasMiddleware
 
     public function index()
     {
+        $favourites = Favourite::all();
         $travels = Travel::where('is_accepted', true)->orderBy('created_at','desc')->paginate(4);
         return view('travel.index',compact('travels'));
     }
@@ -40,7 +42,15 @@ class TravelController extends Controller implements HasMiddleware
      */
     public function store(Request $request)
     {
-        //
+        $favourite = Favourite::create([
+           'title' => $request-> Title,
+           'category' => $request-> Category,
+           'region' => $request-> Region,
+           'price' => $request-> Price,
+           'user_id' => Auth::user()->id,
+        ]);
+        $favourite->users()->attach(Auth::user()->id);
+        return redirect(route('HomePage'))->with('MovieAdded','Hai inserito correttamente il film');
     }
 
     /**
