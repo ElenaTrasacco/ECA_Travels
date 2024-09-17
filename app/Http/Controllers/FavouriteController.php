@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class FavouriteController extends Controller
 {
+
+    public function like(Favourite $favourite){
+
+    }
+    //o è travel?
+    public function unlike(Favourite $favourite){
+        
+    }
     /**
      * Display a listing of the resource.
      */
@@ -58,7 +66,7 @@ class FavouriteController extends Controller
     public function update(Request $request, Favourite $favourite)
     {
         $favourite->users()->attach(Auth::user()->id);
-        return redirect()->back()->with('message', "L'articolo $favourites->title è tra i tuoi preferiti");
+        // return redirect()->back()->with('message', "L'articolo $favourites->title è tra i tuoi preferiti");
     }
 
     /**

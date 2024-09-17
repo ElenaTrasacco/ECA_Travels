@@ -19,8 +19,6 @@ Route::get('/travel/show/{travel}',[TravelController::class,'show'])->name('trav
 Route::get('/travel/category/{category}',[TravelController::class,'byCategory'])->name('travel.category');
 Route::get('/travel/region/{region}', [TravelController::class, 'region'])->name('travel.region');
 
-// Route::get('travel/favourites', [TravelController::class, 'favourites'])->name('favourites');
-
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{travel}',[RevisorController::class,'accept'])->name('accept');
@@ -28,5 +26,8 @@ Route::patch('/reject/{travel}',[RevisorController::class,'reject'])->name('reje
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
+Route::post('/favourite/like',[FavouriteController::class,'like'])->middleware('auth')->name('favourite.like');
+Route::post('/favourite/unlike',[FavouriteController::class,'unlike'])->middleware('auth')->name('favourite.unlike');
 
-Route::get('/favourite/index',[FavouriteController::class,'index'])->name('favourite.index');
+
+// Route::get('/favourite/index',[FavouriteController::class,'index'])->name('favourite.index');
